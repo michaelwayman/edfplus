@@ -1,0 +1,492 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Project setup and test infrastructure": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393884069
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393892071
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394318068
+      }
+    ],
+    "2.1 Implement `EDFHeader`, `SignalHeader`, and `Annotation` dataclasses": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393884270
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394322783
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394502193
+      }
+    ],
+    "2.2 Implement `Signal` class": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393884393
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394325332
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394506801
+      }
+    ],
+    "2.3 Implement `EDFFile` class": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393884524
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394327541
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394510028
+      }
+    ],
+    "3.1 Implement `parse_global_header(data: bytes, file_size: int, tzinfo: datetime.tzinfo | None) -> EDFHeader`": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393884666
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394516191
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394809823
+      }
+    ],
+    "3.2 Parse EDF+ patient and recording subfields inside `parse_global_header`": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393884786
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394518682
+      },
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394812596
+      }
+    ],
+    "4.1 Implement `parse_signal_headers(data: bytes, ns: int, record_duration: float) -> list[SignalHeader]`": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393884893
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395795809
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395811452
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784396149053
+      }
+    ],
+    "5.1 Implement `parse_tals(data: bytes, record_index: int) -> tuple[float | None, list[Annotation]]`": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393884999
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395796167
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784396155707
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784396666285
+      }
+    ],
+    "6.1 Implement linear `scale_signal` path": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393885119
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395796280
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784396687287
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397012397
+      }
+    ],
+    "6.2 Implement edffloat `scale_signal` path": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393885225
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395796403
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784396691057
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397013103
+      }
+    ],
+    "7.1 Implement `read_signal_data` — core selective loading": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393885330
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395796505
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397018874
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397238031
+      }
+    ],
+    "7.2 Implement EDF+D gap insertion in `read_signal_data`": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393885451
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395796598
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397019713
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397238949
+      }
+    ],
+    "8.1 Implement `read_edf()` in `reader.py`": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393885573
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395796700
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397244460
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397388851
+      }
+    ],
+    "8.2 Implement `EDFFile.read_signals()` (wire `_records.py` and `_scaler.py`)": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393885724
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395796851
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397390182
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397553845
+      }
+    ],
+    "8.3 Populate `__init__.py` exports": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393885922
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395796954
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397554867
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397593360
+      }
+    ],
+    "9. Checkpoint — run full test suite": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393886039
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395797061
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397597713
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397766317
+      }
+    ],
+    "10.1 Write unit tests for `read_edf` error handling and API contract": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393886144
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395797154
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397598829
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397767293
+      }
+    ],
+    "10.2 Write unit tests for `read_signals` API": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393886238
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395797240
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397599618
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397768253
+      }
+    ],
+    "11.1 Write integration tests using `tests/ST7011J0-PSG.edf`": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393886349
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395797345
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397773189
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397834576
+      }
+    ],
+    "12. Final checkpoint — ensure full test suite passes": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784393886462
+      },
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784395797450
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397838398
+      },
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397887481
+      }
+    ],
+    "2. Implement data models (`_models.py`)": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394510145
+      }
+    ],
+    "3. Implement global header parsing (`_header.py` — global portion)": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394812788
+      }
+    ],
+    "2.4 Write unit tests for `_models.py`": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394832490
+      }
+    ],
+    "3.3 Write unit tests for `parse_global_header`": [
+      {
+        "executionId": "2daa7213-3e99-49f5-9d6a-ca7923990524",
+        "chatSessionId": "sess_3222bf8f-cd7a-4f67-ba19-4426ddd10e42",
+        "timestamp": 1784394834883
+      }
+    ],
+    "4. Implement per-signal header parsing (`_header.py` — signal portion)": [
+      {
+        "executionId": "b6ed0d8c-7b6d-46e7-82cb-b5d658e4460d",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784396149226
+      }
+    ],
+    "5. Implement TAL parsing (`_tal.py`)": [
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784396666396
+      }
+    ],
+    "6. Implement signal scaling (`_scaler.py`)": [
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397013218
+      }
+    ],
+    "7. Implement data record reading (`_records.py`)": [
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397239080
+      }
+    ],
+    "8. Implement top-level reader and wire everything together (`reader.py` + `__init__.py`)": [
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397593471
+      }
+    ],
+    "10. Unit tests for `reader.py` end-to-end flows (`test_reader.py`)": [
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397768354
+      }
+    ],
+    "11. Integration tests against the real PSG file (`test_reader.py` integration section)": [
+      {
+        "executionId": "a82dfe1c-1e6d-4825-a363-3bb74f4b60f5",
+        "chatSessionId": "sess_4c5e097a-d661-4ae8-a5f2-2f7a05a21e15",
+        "timestamp": 1784397834677
+      }
+    ]
+  }
+}
