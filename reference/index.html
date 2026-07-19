@@ -1,0 +1,3576 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://michaelwayman.github.io/edfplus/reference/">
+      
+      
+        <link rel="prev" href="../motivation/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>API Reference - edfplus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="edfplus" class="md-header__button md-logo" aria-label="edfplus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            edfplus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/michaelwayman/edfplus" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    michaelwayman/edfplus
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="edfplus" class="md-nav__button md-logo" aria-label="edfplus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    edfplus
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/michaelwayman/edfplus" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    michaelwayman/edfplus
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../motivation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motivation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edfplus.read_edf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        read_edf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edfplus.EDFFile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EDFFile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EDFFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.EDFFile.header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.EDFFile.signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.EDFFile.annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        annotations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.EDFFile.close" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        close
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edfplus.EDFHeader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EDFHeader
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edfplus.Signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.load" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.load_with_timestamps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load_with_timestamps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.physical_samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        physical_samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.digital_samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        digital_samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.timestamps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        timestamps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.datetimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        datetimes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edfplus.Annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edfplus.read_edf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        read_edf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edfplus.EDFFile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EDFFile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EDFFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.EDFFile.header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.EDFFile.signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.EDFFile.annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        annotations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.EDFFile.close" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        close
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edfplus.EDFHeader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EDFHeader
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edfplus.Signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.load" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.load_with_timestamps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load_with_timestamps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.physical_samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        physical_samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.digital_samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        digital_samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.timestamps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        timestamps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edfplus.Signal.datetimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        datetimes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edfplus.Annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="edfplus.read_edf" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">read_edf</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">physical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">eager_load_samples</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#edfplus.read_edf" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+        <p>Open and parse an EDF/EDF+ file, returning an :class:<code>EDFFile</code>.</p>
+<p>The returned object contains parsed header metadata and wired
+:class:<code>Signal</code> instances.  Sample data is loaded lazily on first access
+to <code>signal.samples</code> or <code>signal.load()</code>, unless <code>eager_load_samples</code>
+is <code>True</code>.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>source</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Path to the EDF file (as <code>str</code> or :class:<code>pathlib.Path</code>), or an
+open binary file-like object exposing <code>.read()</code> and <code>.seek()</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span> | <span title="pathlib.Path">Path</span> | <span title="typing.BinaryIO">BinaryIO</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>physical</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>When <code>True</code> (default), samples are scaled to physical values.
+When <code>False</code>, raw <code>int16</code> digital values are returned.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="bool">bool</span></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>dtype</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Optional NumPy dtype to cast scaled physical values to (e.g.
+<code>numpy.float32</code>).  Only valid when <code>physical=True</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="numpy.dtype">dtype</span> | <span title="type">type</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>tzinfo</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Optional timezone info to attach to the parsed start time and
+start datetime.  <code>None</code> (default) produces timezone-naive objects.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="datetime.tzinfo">tzinfo</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>eager_load_samples</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>When <code>True</code>, load all signal samples immediately
+rather than deferring to first access.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="bool">bool</span></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-internal" title="EDFFile(header, signals, annotations, _f, _all_signals=None, _record_onsets=None) (edfplus._models.EDFFile)" href="#edfplus.EDFFile">EDFFile</a></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A fully-constructed :class:<code>EDFFile</code> with parsed headers, signal instances,</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-internal" title="EDFFile(header, signals, annotations, _f, _all_signals=None, _record_onsets=None) (edfplus._models.EDFFile)" href="#edfplus.EDFFile">EDFFile</a></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>and (for EDF+ files) annotations.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="TypeError">TypeError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If <code>source</code> is not a <code>str</code>, <code>pathlib.Path</code>, or binary
+file-like object; or if the file-like object lacks <code>.read()</code> or
+<code>.seek()</code>; or if <code>tzinfo</code> is not a <code>datetime.tzinfo</code> instance.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="FileNotFoundError">FileNotFoundError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If <code>source</code> is a path that does not exist.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="PermissionError">PermissionError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If <code>source</code> is a path without read permission.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="ValueError">ValueError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If <code>dtype</code> is provided with <code>physical=False</code>, or if the
+file header is malformed or truncated.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/edfplus/reader.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-0-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-0-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-0-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-0-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-0-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-0-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-0-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-0-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-0-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-0-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-0-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-0-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-0-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-0-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-0-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-0-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-0-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-0-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-0-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-0-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-0-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-0-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-0-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-0-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-0-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-0-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-0-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-0-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-0-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-0-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-0-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-0-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-0-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-0-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-0-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-0-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-0-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-0-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-0-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-0-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-0-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-0-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-0-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-0-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-0-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-0-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-0-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-0-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-0-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-0-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-0-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-0-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-0-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-0-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-0-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-0-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-0-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-0-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-0-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-0-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-0-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-0-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-0-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-0-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-0-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-0-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-0-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-0-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-0-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-0-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-0-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-0-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-0-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-0-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-0-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-0-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-0-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-0-100">100</a></span>
+<span class="normal"><a href="#__codelineno-0-101">101</a></span>
+<span class="normal"><a href="#__codelineno-0-102">102</a></span>
+<span class="normal"><a href="#__codelineno-0-103">103</a></span>
+<span class="normal"><a href="#__codelineno-0-104">104</a></span>
+<span class="normal"><a href="#__codelineno-0-105">105</a></span>
+<span class="normal"><a href="#__codelineno-0-106">106</a></span>
+<span class="normal"><a href="#__codelineno-0-107">107</a></span>
+<span class="normal"><a href="#__codelineno-0-108">108</a></span>
+<span class="normal"><a href="#__codelineno-0-109">109</a></span>
+<span class="normal"><a href="#__codelineno-0-110">110</a></span>
+<span class="normal"><a href="#__codelineno-0-111">111</a></span>
+<span class="normal"><a href="#__codelineno-0-112">112</a></span>
+<span class="normal"><a href="#__codelineno-0-113">113</a></span>
+<span class="normal"><a href="#__codelineno-0-114">114</a></span>
+<span class="normal"><a href="#__codelineno-0-115">115</a></span>
+<span class="normal"><a href="#__codelineno-0-116">116</a></span>
+<span class="normal"><a href="#__codelineno-0-117">117</a></span>
+<span class="normal"><a href="#__codelineno-0-118">118</a></span>
+<span class="normal"><a href="#__codelineno-0-119">119</a></span>
+<span class="normal"><a href="#__codelineno-0-120">120</a></span>
+<span class="normal"><a href="#__codelineno-0-121">121</a></span>
+<span class="normal"><a href="#__codelineno-0-122">122</a></span>
+<span class="normal"><a href="#__codelineno-0-123">123</a></span>
+<span class="normal"><a href="#__codelineno-0-124">124</a></span>
+<span class="normal"><a href="#__codelineno-0-125">125</a></span>
+<span class="normal"><a href="#__codelineno-0-126">126</a></span>
+<span class="normal"><a href="#__codelineno-0-127">127</a></span>
+<span class="normal"><a href="#__codelineno-0-128">128</a></span>
+<span class="normal"><a href="#__codelineno-0-129">129</a></span>
+<span class="normal"><a href="#__codelineno-0-130">130</a></span>
+<span class="normal"><a href="#__codelineno-0-131">131</a></span>
+<span class="normal"><a href="#__codelineno-0-132">132</a></span>
+<span class="normal"><a href="#__codelineno-0-133">133</a></span>
+<span class="normal"><a href="#__codelineno-0-134">134</a></span>
+<span class="normal"><a href="#__codelineno-0-135">135</a></span>
+<span class="normal"><a href="#__codelineno-0-136">136</a></span>
+<span class="normal"><a href="#__codelineno-0-137">137</a></span>
+<span class="normal"><a href="#__codelineno-0-138">138</a></span>
+<span class="normal"><a href="#__codelineno-0-139">139</a></span>
+<span class="normal"><a href="#__codelineno-0-140">140</a></span>
+<span class="normal"><a href="#__codelineno-0-141">141</a></span>
+<span class="normal"><a href="#__codelineno-0-142">142</a></span>
+<span class="normal"><a href="#__codelineno-0-143">143</a></span>
+<span class="normal"><a href="#__codelineno-0-144">144</a></span>
+<span class="normal"><a href="#__codelineno-0-145">145</a></span>
+<span class="normal"><a href="#__codelineno-0-146">146</a></span>
+<span class="normal"><a href="#__codelineno-0-147">147</a></span>
+<span class="normal"><a href="#__codelineno-0-148">148</a></span>
+<span class="normal"><a href="#__codelineno-0-149">149</a></span>
+<span class="normal"><a href="#__codelineno-0-150">150</a></span>
+<span class="normal"><a href="#__codelineno-0-151">151</a></span>
+<span class="normal"><a href="#__codelineno-0-152">152</a></span>
+<span class="normal"><a href="#__codelineno-0-153">153</a></span>
+<span class="normal"><a href="#__codelineno-0-154">154</a></span>
+<span class="normal"><a href="#__codelineno-0-155">155</a></span>
+<span class="normal"><a href="#__codelineno-0-156">156</a></span>
+<span class="normal"><a href="#__codelineno-0-157">157</a></span>
+<span class="normal"><a href="#__codelineno-0-158">158</a></span>
+<span class="normal"><a href="#__codelineno-0-159">159</a></span>
+<span class="normal"><a href="#__codelineno-0-160">160</a></span>
+<span class="normal"><a href="#__codelineno-0-161">161</a></span>
+<span class="normal"><a href="#__codelineno-0-162">162</a></span>
+<span class="normal"><a href="#__codelineno-0-163">163</a></span>
+<span class="normal"><a href="#__codelineno-0-164">164</a></span>
+<span class="normal"><a href="#__codelineno-0-165">165</a></span>
+<span class="normal"><a href="#__codelineno-0-166">166</a></span>
+<span class="normal"><a href="#__codelineno-0-167">167</a></span>
+<span class="normal"><a href="#__codelineno-0-168">168</a></span>
+<span class="normal"><a href="#__codelineno-0-169">169</a></span>
+<span class="normal"><a href="#__codelineno-0-170">170</a></span>
+<span class="normal"><a href="#__codelineno-0-171">171</a></span>
+<span class="normal"><a href="#__codelineno-0-172">172</a></span>
+<span class="normal"><a href="#__codelineno-0-173">173</a></span>
+<span class="normal"><a href="#__codelineno-0-174">174</a></span>
+<span class="normal"><a href="#__codelineno-0-175">175</a></span>
+<span class="normal"><a href="#__codelineno-0-176">176</a></span>
+<span class="normal"><a href="#__codelineno-0-177">177</a></span>
+<span class="normal"><a href="#__codelineno-0-178">178</a></span>
+<span class="normal"><a href="#__codelineno-0-179">179</a></span>
+<span class="normal"><a href="#__codelineno-0-180">180</a></span>
+<span class="normal"><a href="#__codelineno-0-181">181</a></span>
+<span class="normal"><a href="#__codelineno-0-182">182</a></span>
+<span class="normal"><a href="#__codelineno-0-183">183</a></span>
+<span class="normal"><a href="#__codelineno-0-184">184</a></span>
+<span class="normal"><a href="#__codelineno-0-185">185</a></span>
+<span class="normal"><a href="#__codelineno-0-186">186</a></span>
+<span class="normal"><a href="#__codelineno-0-187">187</a></span>
+<span class="normal"><a href="#__codelineno-0-188">188</a></span>
+<span class="normal"><a href="#__codelineno-0-189">189</a></span>
+<span class="normal"><a href="#__codelineno-0-190">190</a></span>
+<span class="normal"><a href="#__codelineno-0-191">191</a></span>
+<span class="normal"><a href="#__codelineno-0-192">192</a></span>
+<span class="normal"><a href="#__codelineno-0-193">193</a></span>
+<span class="normal"><a href="#__codelineno-0-194">194</a></span>
+<span class="normal"><a href="#__codelineno-0-195">195</a></span>
+<span class="normal"><a href="#__codelineno-0-196">196</a></span>
+<span class="normal"><a href="#__codelineno-0-197">197</a></span>
+<span class="normal"><a href="#__codelineno-0-198">198</a></span>
+<span class="normal"><a href="#__codelineno-0-199">199</a></span>
+<span class="normal"><a href="#__codelineno-0-200">200</a></span>
+<span class="normal"><a href="#__codelineno-0-201">201</a></span>
+<span class="normal"><a href="#__codelineno-0-202">202</a></span>
+<span class="normal"><a href="#__codelineno-0-203">203</a></span>
+<span class="normal"><a href="#__codelineno-0-204">204</a></span>
+<span class="normal"><a href="#__codelineno-0-205">205</a></span>
+<span class="normal"><a href="#__codelineno-0-206">206</a></span>
+<span class="normal"><a href="#__codelineno-0-207">207</a></span>
+<span class="normal"><a href="#__codelineno-0-208">208</a></span>
+<span class="normal"><a href="#__codelineno-0-209">209</a></span>
+<span class="normal"><a href="#__codelineno-0-210">210</a></span>
+<span class="normal"><a href="#__codelineno-0-211">211</a></span>
+<span class="normal"><a href="#__codelineno-0-212">212</a></span>
+<span class="normal"><a href="#__codelineno-0-213">213</a></span>
+<span class="normal"><a href="#__codelineno-0-214">214</a></span>
+<span class="normal"><a href="#__codelineno-0-215">215</a></span>
+<span class="normal"><a href="#__codelineno-0-216">216</a></span>
+<span class="normal"><a href="#__codelineno-0-217">217</a></span>
+<span class="normal"><a href="#__codelineno-0-218">218</a></span>
+<span class="normal"><a href="#__codelineno-0-219">219</a></span>
+<span class="normal"><a href="#__codelineno-0-220">220</a></span>
+<span class="normal"><a href="#__codelineno-0-221">221</a></span>
+<span class="normal"><a href="#__codelineno-0-222">222</a></span>
+<span class="normal"><a href="#__codelineno-0-223">223</a></span>
+<span class="normal"><a href="#__codelineno-0-224">224</a></span>
+<span class="normal"><a href="#__codelineno-0-225">225</a></span>
+<span class="normal"><a href="#__codelineno-0-226">226</a></span>
+<span class="normal"><a href="#__codelineno-0-227">227</a></span>
+<span class="normal"><a href="#__codelineno-0-228">228</a></span>
+<span class="normal"><a href="#__codelineno-0-229">229</a></span>
+<span class="normal"><a href="#__codelineno-0-230">230</a></span>
+<span class="normal"><a href="#__codelineno-0-231">231</a></span>
+<span class="normal"><a href="#__codelineno-0-232">232</a></span>
+<span class="normal"><a href="#__codelineno-0-233">233</a></span>
+<span class="normal"><a href="#__codelineno-0-234">234</a></span>
+<span class="normal"><a href="#__codelineno-0-235">235</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="k">def</span><span class="w"> </span><span class="nf">read_edf</span><span class="p">(</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span> <span class="o">|</span> <span class="n">BinaryIO</span><span class="p">,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>    <span class="o">*</span><span class="p">,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="n">physical</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="n">dtype</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">dtype</span> <span class="o">|</span> <span class="nb">type</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>    <span class="n">tzinfo</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">tzinfo</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>    <span class="n">eager_load_samples</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EDFFile</span><span class="p">:</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Open and parse an EDF/EDF+ file, returning an :class:`EDFFile`.</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="sd">    The returned object contains parsed header metadata and wired</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="sd">    :class:`Signal` instances.  Sample data is loaded lazily on first access</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="sd">    to ``signal.samples`` or ``signal.load()``, unless ``eager_load_samples``</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="sd">    is ``True``.</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="sd">        source: Path to the EDF file (as ``str`` or :class:`pathlib.Path`), or an</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="sd">            open binary file-like object exposing ``.read()`` and ``.seek()``.</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="sd">        physical: When ``True`` (default), samples are scaled to physical values.</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="sd">            When ``False``, raw ``int16`` digital values are returned.</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="sd">        dtype: Optional NumPy dtype to cast scaled physical values to (e.g.</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="sd">            ``numpy.float32``).  Only valid when ``physical=True``.</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="sd">        tzinfo: Optional timezone info to attach to the parsed start time and</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="sd">            start datetime.  ``None`` (default) produces timezone-naive objects.</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="sd">        eager_load_samples: When ``True``, load all signal samples immediately</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="sd">            rather than deferring to first access.</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="sd">        A fully-constructed :class:`EDFFile` with parsed headers, signal instances,</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="sd">        and (for EDF+ files) annotations.</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="sd">    Raises:</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="sd">        TypeError: If ``source`` is not a ``str``, ``pathlib.Path``, or binary</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="sd">            file-like object; or if the file-like object lacks ``.read()`` or</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="sd">            ``.seek()``; or if ``tzinfo`` is not a ``datetime.tzinfo`` instance.</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="sd">        FileNotFoundError: If ``source`` is a path that does not exist.</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="sd">        PermissionError: If ``source`` is a path without read permission.</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="sd">        ValueError: If ``dtype`` is provided with ``physical=False``, or if the</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="sd">            file header is malformed or truncated.</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>    <span class="c1"># Validate tzinfo</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a>    <span class="k">if</span> <span class="n">tzinfo</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tzinfo</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">tzinfo</span><span class="p">):</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a>        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;tzinfo&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">tzinfo</span><span class="p">))</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a>    <span class="c1"># Validate dtype + physical combination</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a>    <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">physical</span><span class="p">:</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;dtype cannot be combined with physical=False&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a>    <span class="c1"># Resolve dtype to numpy.dtype</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a>    <span class="n">resolved_dtype</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">dtype</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a>    <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a>        <span class="n">resolved_dtype</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span> <span class="k">else</span> <span class="n">dtype</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a>
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a>    <span class="c1"># Open or validate source</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84"></a>    <span class="n">f</span><span class="p">:</span> <span class="n">BinaryIO</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">)):</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86"></a>        <span class="n">path</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87"></a>        <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88"></a>            <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>  <span class="c1"># noqa: SIM115</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89"></a>        <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90"></a>            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a>        <span class="k">except</span> <span class="ne">PermissionError</span><span class="p">:</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92"></a>            <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94"></a>        <span class="c1"># Validate BinaryIO-like object</span>
+<a id="__codelineno-0-95" name="__codelineno-0-95"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="s2">&quot;read&quot;</span><span class="p">):</span>
+<a id="__codelineno-0-96" name="__codelineno-0-96"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;.read() method is missing&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-97" name="__codelineno-0-97"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="s2">&quot;seek&quot;</span><span class="p">):</span>
+<a id="__codelineno-0-98" name="__codelineno-0-98"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;.seek() method is missing&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-99" name="__codelineno-0-99"></a>        <span class="n">f</span> <span class="o">=</span> <span class="n">source</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100"></a>
+<a id="__codelineno-0-101" name="__codelineno-0-101"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-102" name="__codelineno-0-102"></a>    <span class="c1"># Determine file size</span>
+<a id="__codelineno-0-103" name="__codelineno-0-103"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-104" name="__codelineno-0-104"></a>    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-105" name="__codelineno-0-105"></a>    <span class="n">file_size</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+<a id="__codelineno-0-106" name="__codelineno-0-106"></a>    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-0-107" name="__codelineno-0-107"></a>
+<a id="__codelineno-0-108" name="__codelineno-0-108"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-109" name="__codelineno-0-109"></a>    <span class="c1"># Read and parse global header (256 bytes)</span>
+<a id="__codelineno-0-110" name="__codelineno-0-110"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-111" name="__codelineno-0-111"></a>    <span class="n">global_data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span>
+<a id="__codelineno-0-112" name="__codelineno-0-112"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">global_data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">256</span><span class="p">:</span>
+<a id="__codelineno-0-113" name="__codelineno-0-113"></a>        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-0-114" name="__codelineno-0-114"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;truncated header&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-115" name="__codelineno-0-115"></a>
+<a id="__codelineno-0-116" name="__codelineno-0-116"></a>    <span class="n">header</span> <span class="o">=</span> <span class="n">parse_global_header</span><span class="p">(</span><span class="n">global_data</span><span class="p">,</span> <span class="n">file_size</span><span class="p">,</span> <span class="n">tzinfo</span><span class="p">)</span>
+<a id="__codelineno-0-117" name="__codelineno-0-117"></a>
+<a id="__codelineno-0-118" name="__codelineno-0-118"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-119" name="__codelineno-0-119"></a>    <span class="c1"># Validate header_bytes == 256 + ns * 256</span>
+<a id="__codelineno-0-120" name="__codelineno-0-120"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-121" name="__codelineno-0-121"></a>    <span class="n">ns</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">num_signals</span>
+<a id="__codelineno-0-122" name="__codelineno-0-122"></a>    <span class="n">expected_header_bytes</span> <span class="o">=</span> <span class="mi">256</span> <span class="o">+</span> <span class="n">ns</span> <span class="o">*</span> <span class="mi">256</span>
+<a id="__codelineno-0-123" name="__codelineno-0-123"></a>    <span class="k">if</span> <span class="n">header</span><span class="o">.</span><span class="n">header_bytes</span> <span class="o">!=</span> <span class="n">expected_header_bytes</span><span class="p">:</span>
+<a id="__codelineno-0-124" name="__codelineno-0-124"></a>        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-0-125" name="__codelineno-0-125"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;malformed header&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-126" name="__codelineno-0-126"></a>
+<a id="__codelineno-0-127" name="__codelineno-0-127"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-128" name="__codelineno-0-128"></a>    <span class="c1"># Read and parse per-signal headers (ns * 256 bytes)</span>
+<a id="__codelineno-0-129" name="__codelineno-0-129"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-130" name="__codelineno-0-130"></a>    <span class="n">signal_data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">ns</span> <span class="o">*</span> <span class="mi">256</span><span class="p">)</span>
+<a id="__codelineno-0-131" name="__codelineno-0-131"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">signal_data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ns</span> <span class="o">*</span> <span class="mi">256</span><span class="p">:</span>
+<a id="__codelineno-0-132" name="__codelineno-0-132"></a>        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-0-133" name="__codelineno-0-133"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;truncated header&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-134" name="__codelineno-0-134"></a>
+<a id="__codelineno-0-135" name="__codelineno-0-135"></a>    <span class="n">all_signals</span> <span class="o">=</span> <span class="n">parse_signal_headers</span><span class="p">(</span><span class="n">signal_data</span><span class="p">,</span> <span class="n">ns</span><span class="p">,</span> <span class="n">header</span><span class="o">.</span><span class="n">record_duration</span><span class="p">)</span>
+<a id="__codelineno-0-136" name="__codelineno-0-136"></a>
+<a id="__codelineno-0-137" name="__codelineno-0-137"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-138" name="__codelineno-0-138"></a>    <span class="c1"># Update EDFHeader with raw signal bytes (frozen dataclass workaround)</span>
+<a id="__codelineno-0-139" name="__codelineno-0-139"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-140" name="__codelineno-0-140"></a>    <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="s2">&quot;_raw_signals&quot;</span><span class="p">,</span> <span class="n">signal_data</span><span class="p">)</span>
+<a id="__codelineno-0-141" name="__codelineno-0-141"></a>
+<a id="__codelineno-0-142" name="__codelineno-0-142"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-143" name="__codelineno-0-143"></a>    <span class="c1"># Infer num_records if -1</span>
+<a id="__codelineno-0-144" name="__codelineno-0-144"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-145" name="__codelineno-0-145"></a>    <span class="n">num_records</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">num_records</span>
+<a id="__codelineno-0-146" name="__codelineno-0-146"></a>    <span class="k">if</span> <span class="n">num_records</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-0-147" name="__codelineno-0-147"></a>        <span class="n">bytes_per_record</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">sig</span><span class="o">.</span><span class="n">samples_per_record</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">sig</span> <span class="ow">in</span> <span class="n">all_signals</span><span class="p">)</span>
+<a id="__codelineno-0-148" name="__codelineno-0-148"></a>        <span class="k">if</span> <span class="n">bytes_per_record</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-0-149" name="__codelineno-0-149"></a>            <span class="n">num_records</span> <span class="o">=</span> <span class="p">(</span><span class="n">file_size</span> <span class="o">-</span> <span class="n">header</span><span class="o">.</span><span class="n">header_bytes</span><span class="p">)</span> <span class="o">//</span> <span class="n">bytes_per_record</span>
+<a id="__codelineno-0-150" name="__codelineno-0-150"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-151" name="__codelineno-0-151"></a>            <span class="n">num_records</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-0-152" name="__codelineno-0-152"></a>        <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="s2">&quot;num_records&quot;</span><span class="p">,</span> <span class="n">num_records</span><span class="p">)</span>
+<a id="__codelineno-0-153" name="__codelineno-0-153"></a>
+<a id="__codelineno-0-154" name="__codelineno-0-154"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-155" name="__codelineno-0-155"></a>    <span class="c1"># Compute byte layout for per-signal reading</span>
+<a id="__codelineno-0-156" name="__codelineno-0-156"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-157" name="__codelineno-0-157"></a>    <span class="n">bytes_per_signal</span> <span class="o">=</span> <span class="p">[</span><span class="n">sig</span><span class="o">.</span><span class="n">samples_per_record</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">sig</span> <span class="ow">in</span> <span class="n">all_signals</span><span class="p">]</span>
+<a id="__codelineno-0-158" name="__codelineno-0-158"></a>    <span class="n">total_bytes_per_record</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">bytes_per_signal</span><span class="p">)</span>
+<a id="__codelineno-0-159" name="__codelineno-0-159"></a>
+<a id="__codelineno-0-160" name="__codelineno-0-160"></a>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sig</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_signals</span><span class="p">):</span>
+<a id="__codelineno-0-161" name="__codelineno-0-161"></a>        <span class="n">sig</span><span class="o">.</span><span class="n">_byte_offset_in_record</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">bytes_per_signal</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span>
+<a id="__codelineno-0-162" name="__codelineno-0-162"></a>        <span class="n">sig</span><span class="o">.</span><span class="n">_bytes_per_record</span> <span class="o">=</span> <span class="n">total_bytes_per_record</span>
+<a id="__codelineno-0-163" name="__codelineno-0-163"></a>        <span class="n">sig</span><span class="o">.</span><span class="n">_edf_header</span> <span class="o">=</span> <span class="n">header</span>
+<a id="__codelineno-0-164" name="__codelineno-0-164"></a>        <span class="n">sig</span><span class="o">.</span><span class="n">_physical</span> <span class="o">=</span> <span class="n">physical</span>
+<a id="__codelineno-0-165" name="__codelineno-0-165"></a>        <span class="n">sig</span><span class="o">.</span><span class="n">_dtype</span> <span class="o">=</span> <span class="n">resolved_dtype</span>
+<a id="__codelineno-0-166" name="__codelineno-0-166"></a>
+<a id="__codelineno-0-167" name="__codelineno-0-167"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-168" name="__codelineno-0-168"></a>    <span class="c1"># Filter non-annotation signals</span>
+<a id="__codelineno-0-169" name="__codelineno-0-169"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-170" name="__codelineno-0-170"></a>    <span class="n">signals</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Signal</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">sig</span> <span class="k">for</span> <span class="n">sig</span> <span class="ow">in</span> <span class="n">all_signals</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">sig</span><span class="o">.</span><span class="n">is_annotation</span><span class="p">]</span>
+<a id="__codelineno-0-171" name="__codelineno-0-171"></a>
+<a id="__codelineno-0-172" name="__codelineno-0-172"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-173" name="__codelineno-0-173"></a>    <span class="c1"># For EDF+ variants: read all annotation data and parse TALs</span>
+<a id="__codelineno-0-174" name="__codelineno-0-174"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-175" name="__codelineno-0-175"></a>    <span class="n">annotations</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Annotation</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-176" name="__codelineno-0-176"></a>    <span class="n">record_onsets</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-177" name="__codelineno-0-177"></a>
+<a id="__codelineno-0-178" name="__codelineno-0-178"></a>    <span class="k">if</span> <span class="n">header</span><span class="o">.</span><span class="n">variant</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;EDF+C&quot;</span><span class="p">,</span> <span class="s2">&quot;EDF+D&quot;</span><span class="p">):</span>
+<a id="__codelineno-0-179" name="__codelineno-0-179"></a>        <span class="c1"># Find the annotation signal index and its byte position within a record</span>
+<a id="__codelineno-0-180" name="__codelineno-0-180"></a>        <span class="n">annotation_idx</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-0-181" name="__codelineno-0-181"></a>        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sig</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_signals</span><span class="p">):</span>
+<a id="__codelineno-0-182" name="__codelineno-0-182"></a>            <span class="k">if</span> <span class="n">sig</span><span class="o">.</span><span class="n">is_annotation</span><span class="p">:</span>
+<a id="__codelineno-0-183" name="__codelineno-0-183"></a>                <span class="n">annotation_idx</span> <span class="o">=</span> <span class="n">i</span>
+<a id="__codelineno-0-184" name="__codelineno-0-184"></a>                <span class="k">break</span>
+<a id="__codelineno-0-185" name="__codelineno-0-185"></a>
+<a id="__codelineno-0-186" name="__codelineno-0-186"></a>        <span class="k">if</span> <span class="n">annotation_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-187" name="__codelineno-0-187"></a>            <span class="n">ann_sig</span> <span class="o">=</span> <span class="n">all_signals</span><span class="p">[</span><span class="n">annotation_idx</span><span class="p">]</span>
+<a id="__codelineno-0-188" name="__codelineno-0-188"></a>            <span class="n">ann_bytes_per_record</span> <span class="o">=</span> <span class="n">ann_sig</span><span class="o">.</span><span class="n">samples_per_record</span> <span class="o">*</span> <span class="mi">2</span>
+<a id="__codelineno-0-189" name="__codelineno-0-189"></a>
+<a id="__codelineno-0-190" name="__codelineno-0-190"></a>            <span class="c1"># Offset of annotation signal within a single record</span>
+<a id="__codelineno-0-191" name="__codelineno-0-191"></a>            <span class="n">ann_offset_in_record</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">bytes_per_signal</span><span class="p">[:</span><span class="n">annotation_idx</span><span class="p">])</span>
+<a id="__codelineno-0-192" name="__codelineno-0-192"></a>
+<a id="__codelineno-0-193" name="__codelineno-0-193"></a>            <span class="c1"># Read annotation bytes from every record</span>
+<a id="__codelineno-0-194" name="__codelineno-0-194"></a>            <span class="k">for</span> <span class="n">record_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_records</span><span class="p">):</span>
+<a id="__codelineno-0-195" name="__codelineno-0-195"></a>                <span class="n">record_start</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">header_bytes</span> <span class="o">+</span> <span class="n">record_idx</span> <span class="o">*</span> <span class="n">total_bytes_per_record</span>
+<a id="__codelineno-0-196" name="__codelineno-0-196"></a>                <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">record_start</span> <span class="o">+</span> <span class="n">ann_offset_in_record</span><span class="p">)</span>
+<a id="__codelineno-0-197" name="__codelineno-0-197"></a>                <span class="n">ann_data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">ann_bytes_per_record</span><span class="p">)</span>
+<a id="__codelineno-0-198" name="__codelineno-0-198"></a>
+<a id="__codelineno-0-199" name="__codelineno-0-199"></a>                <span class="n">timekeeping_onset</span><span class="p">,</span> <span class="n">record_annotations</span> <span class="o">=</span> <span class="n">parse_tals</span><span class="p">(</span><span class="n">ann_data</span><span class="p">,</span> <span class="n">record_idx</span><span class="p">)</span>
+<a id="__codelineno-0-200" name="__codelineno-0-200"></a>                <span class="n">annotations</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">record_annotations</span><span class="p">)</span>
+<a id="__codelineno-0-201" name="__codelineno-0-201"></a>
+<a id="__codelineno-0-202" name="__codelineno-0-202"></a>                <span class="c1"># Store record onsets for EDF+D gap handling</span>
+<a id="__codelineno-0-203" name="__codelineno-0-203"></a>                <span class="k">if</span> <span class="n">timekeeping_onset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-204" name="__codelineno-0-204"></a>                    <span class="n">record_onsets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">timekeeping_onset</span><span class="p">)</span>
+<a id="__codelineno-0-205" name="__codelineno-0-205"></a>
+<a id="__codelineno-0-206" name="__codelineno-0-206"></a>            <span class="c1"># Sort annotations by onset</span>
+<a id="__codelineno-0-207" name="__codelineno-0-207"></a>            <span class="n">annotations</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="n">a</span><span class="o">.</span><span class="n">onset</span><span class="p">)</span>
+<a id="__codelineno-0-208" name="__codelineno-0-208"></a>
+<a id="__codelineno-0-209" name="__codelineno-0-209"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-210" name="__codelineno-0-210"></a>    <span class="c1"># Construct EDFFile</span>
+<a id="__codelineno-0-211" name="__codelineno-0-211"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-212" name="__codelineno-0-212"></a>    <span class="n">edf_file</span> <span class="o">=</span> <span class="n">EDFFile</span><span class="p">(</span>
+<a id="__codelineno-0-213" name="__codelineno-0-213"></a>        <span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">,</span>
+<a id="__codelineno-0-214" name="__codelineno-0-214"></a>        <span class="n">signals</span><span class="o">=</span><span class="n">signals</span><span class="p">,</span>
+<a id="__codelineno-0-215" name="__codelineno-0-215"></a>        <span class="n">annotations</span><span class="o">=</span><span class="n">annotations</span><span class="p">,</span>
+<a id="__codelineno-0-216" name="__codelineno-0-216"></a>        <span class="n">_f</span><span class="o">=</span><span class="n">f</span><span class="p">,</span>
+<a id="__codelineno-0-217" name="__codelineno-0-217"></a>        <span class="n">_all_signals</span><span class="o">=</span><span class="n">all_signals</span><span class="p">,</span>
+<a id="__codelineno-0-218" name="__codelineno-0-218"></a>        <span class="n">_record_onsets</span><span class="o">=</span><span class="n">record_onsets</span><span class="p">,</span>
+<a id="__codelineno-0-219" name="__codelineno-0-219"></a>    <span class="p">)</span>
+<a id="__codelineno-0-220" name="__codelineno-0-220"></a>
+<a id="__codelineno-0-221" name="__codelineno-0-221"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-222" name="__codelineno-0-222"></a>    <span class="c1"># Wire weakrefs on each non-annotation signal</span>
+<a id="__codelineno-0-223" name="__codelineno-0-223"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-224" name="__codelineno-0-224"></a>    <span class="n">edf_ref</span> <span class="o">=</span> <span class="n">weakref</span><span class="o">.</span><span class="n">ref</span><span class="p">(</span><span class="n">edf_file</span><span class="p">)</span>
+<a id="__codelineno-0-225" name="__codelineno-0-225"></a>    <span class="k">for</span> <span class="n">sig</span> <span class="ow">in</span> <span class="n">signals</span><span class="p">:</span>
+<a id="__codelineno-0-226" name="__codelineno-0-226"></a>        <span class="n">sig</span><span class="o">.</span><span class="n">_edf_file</span> <span class="o">=</span> <span class="n">edf_ref</span>
+<a id="__codelineno-0-227" name="__codelineno-0-227"></a>
+<a id="__codelineno-0-228" name="__codelineno-0-228"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-229" name="__codelineno-0-229"></a>    <span class="c1"># Eager load if requested</span>
+<a id="__codelineno-0-230" name="__codelineno-0-230"></a>    <span class="c1"># ------------------------------------------------------------------</span>
+<a id="__codelineno-0-231" name="__codelineno-0-231"></a>    <span class="k">if</span> <span class="n">eager_load_samples</span><span class="p">:</span>
+<a id="__codelineno-0-232" name="__codelineno-0-232"></a>        <span class="k">for</span> <span class="n">sig</span> <span class="ow">in</span> <span class="n">signals</span><span class="p">:</span>
+<a id="__codelineno-0-233" name="__codelineno-0-233"></a>            <span class="n">sig</span><span class="o">.</span><span class="n">_ensure_loaded</span><span class="p">()</span>
+<a id="__codelineno-0-234" name="__codelineno-0-234"></a>
+<a id="__codelineno-0-235" name="__codelineno-0-235"></a>    <span class="k">return</span> <span class="n">edf_file</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="edfplus.EDFFile" class="doc doc-heading">
+              <code class="highlight language-python"><span class="n">EDFFile</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">signals</span><span class="p">,</span> <span class="n">annotations</span><span class="p">,</span> <span class="n">_f</span><span class="p">,</span> <span class="n">_all_signals</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">_record_onsets</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#edfplus.EDFFile" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Top-level container returned by <code>read_edf()</code>.</p>
+<p>Holds the parsed header, all wired <code>Signal</code> instances (with lazy loading),
+and an <code>Annotation</code> list for EDF+ files.  The underlying file handle is
+kept open for lazy signal loading.  Always use the context-manager protocol
+or call <code>close()</code> when done.</p>
+<p>Signals are populated immediately upon construction.  Sample data is loaded
+lazily on first access to <code>signal.samples</code> or <code>signal.load()</code>, unless
+<code>eager_load_samples=True</code> was passed to <code>read_edf()</code>.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>header</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Parsed <code>EDFHeader</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="EDFHeader(version, local_patient_id, local_recording_id, num_records, record_duration, num_signals, header_bytes, variant, start_date, start_time, start_datetime, patient_code, patient_sex, patient_birthdate, patient_name, recording_startdate, recording_admin_code, recording_technician, recording_equipment, _raw_global, _raw_signals)
+
+  
+      dataclass
+   (edfplus._models.EDFHeader)" href="#edfplus.EDFHeader">EDFHeader</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>signals</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>List of non-annotation <code>Signal</code> instances (wired with weakrefs).</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="Signal(label, transducer_type, physical_dimension, physical_min, physical_max, digital_min, digital_max, prefiltering, samples_per_record, sample_rate, is_annotation, index, _edf_file=None, _edf_header=None, _byte_offset_in_record=0, _bytes_per_record=0, _physical=True, _dtype=None)
+
+  
+      dataclass
+   (edfplus._models.Signal)" href="#edfplus.Signal">Signal</a>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>annotations</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>List of <code>Annotation</code> objects from the EDF Annotations channel;
+empty for plain EDF files.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="Annotation(onset, duration, text)
+
+  
+      dataclass
+   (edfplus._models.Annotation)" href="#edfplus.Annotation">Annotation</a>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>_f</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Open binary file handle for lazy data record reading.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.BinaryIO">BinaryIO</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>_all_signals</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Full list of all <code>Signal</code> objects (including annotation
+channels) in file order, needed for byte offset calculation.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="Signal(label, transducer_type, physical_dimension, physical_min, physical_max, digital_min, digital_max, prefiltering, samples_per_record, sample_rate, is_annotation, index, _edf_file=None, _edf_header=None, _byte_offset_in_record=0, _bytes_per_record=0, _physical=True, _dtype=None)
+
+  
+      dataclass
+   (edfplus._models.Signal)" href="#edfplus.Signal">Signal</a>] | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>_record_onsets</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Per-record time-keeping onsets for EDF+D files.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="list">list</span>[<span title="float">float</span>] | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+                  <details class="mkdocstrings-source">
+                    <summary>Source code in <code>src/edfplus/_models.py</code></summary>
+                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-538">538</a></span>
+<span class="normal"><a href="#__codelineno-0-539">539</a></span>
+<span class="normal"><a href="#__codelineno-0-540">540</a></span>
+<span class="normal"><a href="#__codelineno-0-541">541</a></span>
+<span class="normal"><a href="#__codelineno-0-542">542</a></span>
+<span class="normal"><a href="#__codelineno-0-543">543</a></span>
+<span class="normal"><a href="#__codelineno-0-544">544</a></span>
+<span class="normal"><a href="#__codelineno-0-545">545</a></span>
+<span class="normal"><a href="#__codelineno-0-546">546</a></span>
+<span class="normal"><a href="#__codelineno-0-547">547</a></span>
+<span class="normal"><a href="#__codelineno-0-548">548</a></span>
+<span class="normal"><a href="#__codelineno-0-549">549</a></span>
+<span class="normal"><a href="#__codelineno-0-550">550</a></span>
+<span class="normal"><a href="#__codelineno-0-551">551</a></span>
+<span class="normal"><a href="#__codelineno-0-552">552</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-538" name="__codelineno-0-538"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+<a id="__codelineno-0-539" name="__codelineno-0-539"></a>    <span class="bp">self</span><span class="p">,</span>
+<a id="__codelineno-0-540" name="__codelineno-0-540"></a>    <span class="n">header</span><span class="p">:</span> <span class="n">EDFHeader</span><span class="p">,</span>
+<a id="__codelineno-0-541" name="__codelineno-0-541"></a>    <span class="n">signals</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Signal</span><span class="p">],</span>
+<a id="__codelineno-0-542" name="__codelineno-0-542"></a>    <span class="n">annotations</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Annotation</span><span class="p">],</span>
+<a id="__codelineno-0-543" name="__codelineno-0-543"></a>    <span class="n">_f</span><span class="p">:</span> <span class="n">BinaryIO</span><span class="p">,</span>
+<a id="__codelineno-0-544" name="__codelineno-0-544"></a>    <span class="n">_all_signals</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Signal</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-545" name="__codelineno-0-545"></a>    <span class="n">_record_onsets</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-546" name="__codelineno-0-546"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-547" name="__codelineno-0-547"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_header</span> <span class="o">=</span> <span class="n">header</span>
+<a id="__codelineno-0-548" name="__codelineno-0-548"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_signals</span> <span class="o">=</span> <span class="n">signals</span>
+<a id="__codelineno-0-549" name="__codelineno-0-549"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span> <span class="o">=</span> <span class="n">annotations</span>
+<a id="__codelineno-0-550" name="__codelineno-0-550"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_f</span> <span class="o">=</span> <span class="n">_f</span>
+<a id="__codelineno-0-551" name="__codelineno-0-551"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_all_signals</span> <span class="o">=</span> <span class="n">_all_signals</span> <span class="ow">or</span> <span class="p">[]</span>
+<a id="__codelineno-0-552" name="__codelineno-0-552"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_record_onsets</span> <span class="o">=</span> <span class="n">_record_onsets</span> <span class="ow">or</span> <span class="p">[]</span>
+</code></pre></div></td></tr></table></div>
+                  </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="edfplus.EDFFile.header" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">header</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#edfplus.EDFFile.header" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Parsed global <code>EDFHeader</code>.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="edfplus.EDFFile.signals" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">signals</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#edfplus.EDFFile.signals" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Non-annotation <code>Signal</code> instances in file order (lazy-loading).</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="edfplus.EDFFile.annotations" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">annotations</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#edfplus.EDFFile.annotations" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Parsed <code>Annotation</code> list sorted by onset; empty for plain EDF files.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="edfplus.EDFFile.close" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">close</span><span class="p">()</span></code>
+
+<a href="#edfplus.EDFFile.close" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Close the underlying file handle.</p>
+<p>Safe to call multiple times.</p>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/edfplus/_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-609">609</a></span>
+<span class="normal"><a href="#__codelineno-0-610">610</a></span>
+<span class="normal"><a href="#__codelineno-0-611">611</a></span>
+<span class="normal"><a href="#__codelineno-0-612">612</a></span>
+<span class="normal"><a href="#__codelineno-0-613">613</a></span>
+<span class="normal"><a href="#__codelineno-0-614">614</a></span>
+<span class="normal"><a href="#__codelineno-0-615">615</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-609" name="__codelineno-0-609"></a><span class="k">def</span><span class="w"> </span><span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-610" name="__codelineno-0-610"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Close the underlying file handle.</span>
+<a id="__codelineno-0-611" name="__codelineno-0-611"></a>
+<a id="__codelineno-0-612" name="__codelineno-0-612"></a><span class="sd">    Safe to call multiple times.</span>
+<a id="__codelineno-0-613" name="__codelineno-0-613"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-614" name="__codelineno-0-614"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_f</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_f</span><span class="o">.</span><span class="n">closed</span><span class="p">:</span>
+<a id="__codelineno-0-615" name="__codelineno-0-615"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="edfplus.EDFHeader" class="doc doc-heading">
+              <code class="highlight language-python"><span class="n">EDFHeader</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">local_patient_id</span><span class="p">,</span> <span class="n">local_recording_id</span><span class="p">,</span> <span class="n">num_records</span><span class="p">,</span> <span class="n">record_duration</span><span class="p">,</span> <span class="n">num_signals</span><span class="p">,</span> <span class="n">header_bytes</span><span class="p">,</span> <span class="n">variant</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">start_datetime</span><span class="p">,</span> <span class="n">patient_code</span><span class="p">,</span> <span class="n">patient_sex</span><span class="p">,</span> <span class="n">patient_birthdate</span><span class="p">,</span> <span class="n">patient_name</span><span class="p">,</span> <span class="n">recording_startdate</span><span class="p">,</span> <span class="n">recording_admin_code</span><span class="p">,</span> <span class="n">recording_technician</span><span class="p">,</span> <span class="n">recording_equipment</span><span class="p">,</span> <span class="n">_raw_global</span><span class="p">,</span> <span class="n">_raw_signals</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#edfplus.EDFHeader" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Parsed global header from a 256-byte EDF/EDF+ header block.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">ATTRIBUTE</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.version">version</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Version field, always <code>"0"</code> for a valid EDF file.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.local_patient_id">local_patient_id</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Raw 80-byte local patient identification field, stripped.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.local_recording_id">local_recording_id</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Raw 80-byte local recording identification field, stripped.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.num_records">num_records</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Number of data records in the file (inferred from file size when
+the on-disk value is <code>-1</code>).</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.record_duration">record_duration</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Duration of each data record in seconds.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="float">float</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.num_signals">num_signals</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Total number of signals (<code>ns</code>), including any EDF Annotations
+signal.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.header_bytes">header_bytes</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Total header size in bytes (<code>256 + ns * 256</code>).</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.variant">variant</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>EDF variant detected from the reserved field.  One of <code>"EDF"</code>,
+<code>"EDF+C"</code> (continuous), or <code>"EDF+D"</code> (discontinuous).</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Literal">Literal</span>[&#39;EDF&#39;, &#39;EDF+C&#39;, &#39;EDF+D&#39;]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.start_date">start_date</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Recording start date.  Year is interpreted with the two-digit rule:
+<code>yy &gt;= 85</code> → 19xx, <code>yy &lt; 85</code> → 20xx.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="datetime.date">date</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.start_time">start_time</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Recording start time.  Timezone-naive unless a <code>tzinfo</code> was
+passed to <code>read_edf()</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="datetime.time">time</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.start_datetime">start_datetime</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Combined <code>start_date</code> + <code>start_time</code>.  Timezone-naive
+unless a <code>tzinfo</code> was passed to <code>read_edf()</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="datetime.datetime">datetime</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.patient_code">patient_code</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Hospital/patient code from the EDF+ patient identification
+subfield; <code>None</code> for plain EDF or when the subfield is <code>"X"</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span> | None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.patient_sex">patient_sex</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Sex subfield from the EDF+ patient identification; <code>None</code> for
+plain EDF or <code>"X"</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span> | None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.patient_birthdate">patient_birthdate</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Parsed birthdate from the EDF+ patient identification
+subfield; <code>None</code> for plain EDF or <code>"X"</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="datetime.date">date</span> | None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.patient_name">patient_name</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Patient name from the EDF+ patient identification subfield;
+<code>None</code> for plain EDF or <code>"X"</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span> | None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.recording_startdate">recording_startdate</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Recording start date parsed from the EDF+ recording
+identification subfield; <code>None</code> for plain EDF or <code>"X"</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="datetime.date">date</span> | None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.recording_admin_code">recording_admin_code</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Investigation/admin code from the EDF+ recording
+identification subfield; <code>None</code> for plain EDF or <code>"X"</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span> | None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.recording_technician">recording_technician</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Technician/investigator code from the EDF+ recording
+identification subfield; <code>None</code> for plain EDF or <code>"X"</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span> | None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader.recording_equipment">recording_equipment</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Equipment code from the EDF+ recording identification
+subfield; <code>None</code> for plain EDF or <code>"X"</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span> | None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader._raw_global">_raw_global</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Original 256 bytes of the global header, preserved for
+round-trip fidelity.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="bytes">bytes</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.EDFHeader._raw_signals">_raw_signals</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Original <code>ns * 256</code> bytes of the per-signal header block,
+preserved for round-trip fidelity.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="bytes">bytes</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="edfplus.Signal" class="doc doc-heading">
+              <code class="highlight language-python"><span class="n">Signal</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">transducer_type</span><span class="p">,</span> <span class="n">physical_dimension</span><span class="p">,</span> <span class="n">physical_min</span><span class="p">,</span> <span class="n">physical_max</span><span class="p">,</span> <span class="n">digital_min</span><span class="p">,</span> <span class="n">digital_max</span><span class="p">,</span> <span class="n">prefiltering</span><span class="p">,</span> <span class="n">samples_per_record</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">,</span> <span class="n">is_annotation</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">_edf_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">_edf_header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">_byte_offset_in_record</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">_bytes_per_record</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">_physical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">_dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#edfplus.Signal" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>A single EDF/EDF+ signal channel with header metadata and lazy sample loading.</p>
+<p>All per-signal header fields are stored directly as dataclass fields.
+Sample data is loaded lazily: accessing the <code>samples</code> property auto-loads
+from disk on first access (if a parent EDFFile weakref is wired), or raises
+<code>RuntimeError</code> if the signal is not wired to a file.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">ATTRIBUTE</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.label">label</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Signal label, stripped of leading/trailing whitespace.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.transducer_type">transducer_type</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Transducer type string.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.physical_dimension">physical_dimension</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Physical dimension (unit) string.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.physical_min">physical_min</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Physical minimum calibration value.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="float">float</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.physical_max">physical_max</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Physical maximum calibration value.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="float">float</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.digital_min">digital_min</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Minimum raw digital (int16) value.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.digital_max">digital_max</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Maximum raw digital (int16) value.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.prefiltering">prefiltering</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Pre-filtering description string.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.samples_per_record">samples_per_record</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Number of samples in each data record for this signal.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.sample_rate">sample_rate</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Sample rate in Hz (<code>samples_per_record / record_duration</code>).</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="float">float</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.is_annotation">is_annotation</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p><code>True</code> when this signal is the EDF Annotations channel.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="bool">bool</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Signal.index">index</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>0-based position of this signal in the file's signal list.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="edfplus.Signal.samples" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">samples</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#edfplus.Signal.samples" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Loaded sample array (physical float64 by default, or raw int16 if unscaled).</p>
+<p>Auto-loads from disk on first access if wired to an EDFFile.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="edfplus.Signal.load" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">load</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">onset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#edfplus.Signal.load" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Load and return a slice of the signal's samples.</p>
+<p>Supports flexible cropping by sample index, seconds, datetime, or timedelta.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>start</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Start position. int=sample index, float=seconds, datetime=absolute,
+timedelta=offset from recording start.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span> | <span title="float">float</span> | <span title="datetime.datetime">datetime</span> | <span title="datetime.timedelta">timedelta</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>stop</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Stop position (same type interpretation as start).</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span> | <span title="float">float</span> | <span title="datetime.datetime">datetime</span> | <span title="datetime.timedelta">timedelta</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>onset</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Alias for start. Cannot be used together with start.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span> | <span title="float">float</span> | <span title="datetime.datetime">datetime</span> | <span title="datetime.timedelta">timedelta</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>duration</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Duration from start. float=seconds, timedelta=offset. Cannot be
+used together with stop.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="float">float</span> | <span title="datetime.timedelta">timedelta</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><span title="numpy.ndarray">ndarray</span></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A NumPy array of the cropped samples.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="ValueError">ValueError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If both start and onset are specified, or both stop and
+duration are specified.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/edfplus/_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-269">269</a></span>
+<span class="normal"><a href="#__codelineno-0-270">270</a></span>
+<span class="normal"><a href="#__codelineno-0-271">271</a></span>
+<span class="normal"><a href="#__codelineno-0-272">272</a></span>
+<span class="normal"><a href="#__codelineno-0-273">273</a></span>
+<span class="normal"><a href="#__codelineno-0-274">274</a></span>
+<span class="normal"><a href="#__codelineno-0-275">275</a></span>
+<span class="normal"><a href="#__codelineno-0-276">276</a></span>
+<span class="normal"><a href="#__codelineno-0-277">277</a></span>
+<span class="normal"><a href="#__codelineno-0-278">278</a></span>
+<span class="normal"><a href="#__codelineno-0-279">279</a></span>
+<span class="normal"><a href="#__codelineno-0-280">280</a></span>
+<span class="normal"><a href="#__codelineno-0-281">281</a></span>
+<span class="normal"><a href="#__codelineno-0-282">282</a></span>
+<span class="normal"><a href="#__codelineno-0-283">283</a></span>
+<span class="normal"><a href="#__codelineno-0-284">284</a></span>
+<span class="normal"><a href="#__codelineno-0-285">285</a></span>
+<span class="normal"><a href="#__codelineno-0-286">286</a></span>
+<span class="normal"><a href="#__codelineno-0-287">287</a></span>
+<span class="normal"><a href="#__codelineno-0-288">288</a></span>
+<span class="normal"><a href="#__codelineno-0-289">289</a></span>
+<span class="normal"><a href="#__codelineno-0-290">290</a></span>
+<span class="normal"><a href="#__codelineno-0-291">291</a></span>
+<span class="normal"><a href="#__codelineno-0-292">292</a></span>
+<span class="normal"><a href="#__codelineno-0-293">293</a></span>
+<span class="normal"><a href="#__codelineno-0-294">294</a></span>
+<span class="normal"><a href="#__codelineno-0-295">295</a></span>
+<span class="normal"><a href="#__codelineno-0-296">296</a></span>
+<span class="normal"><a href="#__codelineno-0-297">297</a></span>
+<span class="normal"><a href="#__codelineno-0-298">298</a></span>
+<span class="normal"><a href="#__codelineno-0-299">299</a></span>
+<span class="normal"><a href="#__codelineno-0-300">300</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-269" name="__codelineno-0-269"></a><span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span>
+<a id="__codelineno-0-270" name="__codelineno-0-270"></a>    <span class="bp">self</span><span class="p">,</span>
+<a id="__codelineno-0-271" name="__codelineno-0-271"></a>    <span class="n">start</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-272" name="__codelineno-0-272"></a>    <span class="n">stop</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-273" name="__codelineno-0-273"></a>    <span class="o">*</span><span class="p">,</span>
+<a id="__codelineno-0-274" name="__codelineno-0-274"></a>    <span class="n">onset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-275" name="__codelineno-0-275"></a>    <span class="n">duration</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-276" name="__codelineno-0-276"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<a id="__codelineno-0-277" name="__codelineno-0-277"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Load and return a slice of the signal&#39;s samples.</span>
+<a id="__codelineno-0-278" name="__codelineno-0-278"></a>
+<a id="__codelineno-0-279" name="__codelineno-0-279"></a><span class="sd">    Supports flexible cropping by sample index, seconds, datetime, or timedelta.</span>
+<a id="__codelineno-0-280" name="__codelineno-0-280"></a>
+<a id="__codelineno-0-281" name="__codelineno-0-281"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-282" name="__codelineno-0-282"></a><span class="sd">        start: Start position. int=sample index, float=seconds, datetime=absolute,</span>
+<a id="__codelineno-0-283" name="__codelineno-0-283"></a><span class="sd">            timedelta=offset from recording start.</span>
+<a id="__codelineno-0-284" name="__codelineno-0-284"></a><span class="sd">        stop: Stop position (same type interpretation as start).</span>
+<a id="__codelineno-0-285" name="__codelineno-0-285"></a><span class="sd">        onset: Alias for start. Cannot be used together with start.</span>
+<a id="__codelineno-0-286" name="__codelineno-0-286"></a><span class="sd">        duration: Duration from start. float=seconds, timedelta=offset. Cannot be</span>
+<a id="__codelineno-0-287" name="__codelineno-0-287"></a><span class="sd">            used together with stop.</span>
+<a id="__codelineno-0-288" name="__codelineno-0-288"></a>
+<a id="__codelineno-0-289" name="__codelineno-0-289"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-290" name="__codelineno-0-290"></a><span class="sd">        A NumPy array of the cropped samples.</span>
+<a id="__codelineno-0-291" name="__codelineno-0-291"></a>
+<a id="__codelineno-0-292" name="__codelineno-0-292"></a><span class="sd">    Raises:</span>
+<a id="__codelineno-0-293" name="__codelineno-0-293"></a><span class="sd">        ValueError: If both start and onset are specified, or both stop and</span>
+<a id="__codelineno-0-294" name="__codelineno-0-294"></a><span class="sd">            duration are specified.</span>
+<a id="__codelineno-0-295" name="__codelineno-0-295"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-296" name="__codelineno-0-296"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_loaded</span><span class="p">()</span>
+<a id="__codelineno-0-297" name="__codelineno-0-297"></a>    <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_samples</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<a id="__codelineno-0-298" name="__codelineno-0-298"></a>    <span class="n">total_samples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_samples</span><span class="p">)</span>
+<a id="__codelineno-0-299" name="__codelineno-0-299"></a>    <span class="n">start_idx</span><span class="p">,</span> <span class="n">stop_idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resolve_bounds</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">onset</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">total_samples</span><span class="p">)</span>
+<a id="__codelineno-0-300" name="__codelineno-0-300"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_samples</span><span class="p">[</span><span class="n">start_idx</span><span class="p">:</span><span class="n">stop_idx</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="edfplus.Signal.load_with_timestamps" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">load_with_timestamps</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">onset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_format</span><span class="o">=</span><span class="s1">&#39;seconds&#39;</span><span class="p">)</span></code>
+
+<a href="#edfplus.Signal.load_with_timestamps" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Load samples and corresponding timestamps.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>start</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Start position (same semantics as <code>load()</code>).</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span> | <span title="float">float</span> | <span title="datetime.datetime">datetime</span> | <span title="datetime.timedelta">timedelta</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>stop</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Stop position (same semantics as <code>load()</code>).</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span> | <span title="float">float</span> | <span title="datetime.datetime">datetime</span> | <span title="datetime.timedelta">timedelta</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>onset</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Alias for start.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span> | <span title="float">float</span> | <span title="datetime.datetime">datetime</span> | <span title="datetime.timedelta">timedelta</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>duration</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Duration from start.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="float">float</span> | <span title="datetime.timedelta">timedelta</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>time_format</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p><code>"seconds"</code> for float64 seconds-from-start timestamps,
+<code>"datetime"</code> for datetime64[us] absolute timestamps.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Literal">Literal</span>[&#39;seconds&#39;, &#39;datetime&#39;]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>&#39;seconds&#39;</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><span title="numpy.ndarray">ndarray</span></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A tuple <code>(samples, timestamps)</code> where both are NumPy arrays of equal</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><span title="numpy.ndarray">ndarray</span></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>length.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="ValueError">ValueError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If both start and onset are specified, or both stop and
+duration are specified.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/edfplus/_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-302">302</a></span>
+<span class="normal"><a href="#__codelineno-0-303">303</a></span>
+<span class="normal"><a href="#__codelineno-0-304">304</a></span>
+<span class="normal"><a href="#__codelineno-0-305">305</a></span>
+<span class="normal"><a href="#__codelineno-0-306">306</a></span>
+<span class="normal"><a href="#__codelineno-0-307">307</a></span>
+<span class="normal"><a href="#__codelineno-0-308">308</a></span>
+<span class="normal"><a href="#__codelineno-0-309">309</a></span>
+<span class="normal"><a href="#__codelineno-0-310">310</a></span>
+<span class="normal"><a href="#__codelineno-0-311">311</a></span>
+<span class="normal"><a href="#__codelineno-0-312">312</a></span>
+<span class="normal"><a href="#__codelineno-0-313">313</a></span>
+<span class="normal"><a href="#__codelineno-0-314">314</a></span>
+<span class="normal"><a href="#__codelineno-0-315">315</a></span>
+<span class="normal"><a href="#__codelineno-0-316">316</a></span>
+<span class="normal"><a href="#__codelineno-0-317">317</a></span>
+<span class="normal"><a href="#__codelineno-0-318">318</a></span>
+<span class="normal"><a href="#__codelineno-0-319">319</a></span>
+<span class="normal"><a href="#__codelineno-0-320">320</a></span>
+<span class="normal"><a href="#__codelineno-0-321">321</a></span>
+<span class="normal"><a href="#__codelineno-0-322">322</a></span>
+<span class="normal"><a href="#__codelineno-0-323">323</a></span>
+<span class="normal"><a href="#__codelineno-0-324">324</a></span>
+<span class="normal"><a href="#__codelineno-0-325">325</a></span>
+<span class="normal"><a href="#__codelineno-0-326">326</a></span>
+<span class="normal"><a href="#__codelineno-0-327">327</a></span>
+<span class="normal"><a href="#__codelineno-0-328">328</a></span>
+<span class="normal"><a href="#__codelineno-0-329">329</a></span>
+<span class="normal"><a href="#__codelineno-0-330">330</a></span>
+<span class="normal"><a href="#__codelineno-0-331">331</a></span>
+<span class="normal"><a href="#__codelineno-0-332">332</a></span>
+<span class="normal"><a href="#__codelineno-0-333">333</a></span>
+<span class="normal"><a href="#__codelineno-0-334">334</a></span>
+<span class="normal"><a href="#__codelineno-0-335">335</a></span>
+<span class="normal"><a href="#__codelineno-0-336">336</a></span>
+<span class="normal"><a href="#__codelineno-0-337">337</a></span>
+<span class="normal"><a href="#__codelineno-0-338">338</a></span>
+<span class="normal"><a href="#__codelineno-0-339">339</a></span>
+<span class="normal"><a href="#__codelineno-0-340">340</a></span>
+<span class="normal"><a href="#__codelineno-0-341">341</a></span>
+<span class="normal"><a href="#__codelineno-0-342">342</a></span>
+<span class="normal"><a href="#__codelineno-0-343">343</a></span>
+<span class="normal"><a href="#__codelineno-0-344">344</a></span>
+<span class="normal"><a href="#__codelineno-0-345">345</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-302" name="__codelineno-0-302"></a><span class="k">def</span><span class="w"> </span><span class="nf">load_with_timestamps</span><span class="p">(</span>
+<a id="__codelineno-0-303" name="__codelineno-0-303"></a>    <span class="bp">self</span><span class="p">,</span>
+<a id="__codelineno-0-304" name="__codelineno-0-304"></a>    <span class="n">start</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-305" name="__codelineno-0-305"></a>    <span class="n">stop</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-306" name="__codelineno-0-306"></a>    <span class="o">*</span><span class="p">,</span>
+<a id="__codelineno-0-307" name="__codelineno-0-307"></a>    <span class="n">onset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-308" name="__codelineno-0-308"></a>    <span class="n">duration</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-309" name="__codelineno-0-309"></a>    <span class="n">time_format</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;seconds&quot;</span><span class="p">,</span> <span class="s2">&quot;datetime&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;seconds&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-310" name="__codelineno-0-310"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+<a id="__codelineno-0-311" name="__codelineno-0-311"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Load samples and corresponding timestamps.</span>
+<a id="__codelineno-0-312" name="__codelineno-0-312"></a>
+<a id="__codelineno-0-313" name="__codelineno-0-313"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-314" name="__codelineno-0-314"></a><span class="sd">        start: Start position (same semantics as ``load()``).</span>
+<a id="__codelineno-0-315" name="__codelineno-0-315"></a><span class="sd">        stop: Stop position (same semantics as ``load()``).</span>
+<a id="__codelineno-0-316" name="__codelineno-0-316"></a><span class="sd">        onset: Alias for start.</span>
+<a id="__codelineno-0-317" name="__codelineno-0-317"></a><span class="sd">        duration: Duration from start.</span>
+<a id="__codelineno-0-318" name="__codelineno-0-318"></a><span class="sd">        time_format: ``&quot;seconds&quot;`` for float64 seconds-from-start timestamps,</span>
+<a id="__codelineno-0-319" name="__codelineno-0-319"></a><span class="sd">            ``&quot;datetime&quot;`` for datetime64[us] absolute timestamps.</span>
+<a id="__codelineno-0-320" name="__codelineno-0-320"></a>
+<a id="__codelineno-0-321" name="__codelineno-0-321"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-322" name="__codelineno-0-322"></a><span class="sd">        A tuple ``(samples, timestamps)`` where both are NumPy arrays of equal</span>
+<a id="__codelineno-0-323" name="__codelineno-0-323"></a><span class="sd">        length.</span>
+<a id="__codelineno-0-324" name="__codelineno-0-324"></a>
+<a id="__codelineno-0-325" name="__codelineno-0-325"></a><span class="sd">    Raises:</span>
+<a id="__codelineno-0-326" name="__codelineno-0-326"></a><span class="sd">        ValueError: If both start and onset are specified, or both stop and</span>
+<a id="__codelineno-0-327" name="__codelineno-0-327"></a><span class="sd">            duration are specified.</span>
+<a id="__codelineno-0-328" name="__codelineno-0-328"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-329" name="__codelineno-0-329"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_loaded</span><span class="p">()</span>
+<a id="__codelineno-0-330" name="__codelineno-0-330"></a>    <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_samples</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<a id="__codelineno-0-331" name="__codelineno-0-331"></a>    <span class="n">total_samples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_samples</span><span class="p">)</span>
+<a id="__codelineno-0-332" name="__codelineno-0-332"></a>    <span class="n">start_idx</span><span class="p">,</span> <span class="n">stop_idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resolve_bounds</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">onset</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">total_samples</span><span class="p">)</span>
+<a id="__codelineno-0-333" name="__codelineno-0-333"></a>    <span class="n">samples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_samples</span><span class="p">[</span><span class="n">start_idx</span><span class="p">:</span><span class="n">stop_idx</span><span class="p">]</span>
+<a id="__codelineno-0-334" name="__codelineno-0-334"></a>
+<a id="__codelineno-0-335" name="__codelineno-0-335"></a>    <span class="k">if</span> <span class="n">time_format</span> <span class="o">==</span> <span class="s2">&quot;seconds&quot;</span><span class="p">:</span>
+<a id="__codelineno-0-336" name="__codelineno-0-336"></a>        <span class="n">timestamps</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start_idx</span><span class="p">,</span> <span class="n">stop_idx</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span>
+<a id="__codelineno-0-337" name="__codelineno-0-337"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-338" name="__codelineno-0-338"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edf_header</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-339" name="__codelineno-0-339"></a>            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Cannot compute datetime timestamps without an associated EDFHeader.&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-340" name="__codelineno-0-340"></a>        <span class="n">origin</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edf_header</span><span class="o">.</span><span class="n">start_datetime</span><span class="p">,</span> <span class="s2">&quot;us&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-341" name="__codelineno-0-341"></a>        <span class="n">seconds</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start_idx</span><span class="p">,</span> <span class="n">stop_idx</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span>
+<a id="__codelineno-0-342" name="__codelineno-0-342"></a>        <span class="n">delta</span> <span class="o">=</span> <span class="p">(</span><span class="n">seconds</span> <span class="o">*</span> <span class="mi">1_000_000</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;timedelta64[us]&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-343" name="__codelineno-0-343"></a>        <span class="n">timestamps</span> <span class="o">=</span> <span class="n">origin</span> <span class="o">+</span> <span class="n">delta</span>
+<a id="__codelineno-0-344" name="__codelineno-0-344"></a>
+<a id="__codelineno-0-345" name="__codelineno-0-345"></a>    <span class="k">return</span> <span class="n">samples</span><span class="p">,</span> <span class="n">timestamps</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="edfplus.Signal.physical_samples" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">physical_samples</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#edfplus.Signal.physical_samples" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return the loaded samples as scaled physical values.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>dtype</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Optional NumPy float dtype to cast the output to.  Defaults to
+<code>float64</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="numpy.dtype">dtype</span> | <span title="type">type</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><span title="numpy.ndarray">ndarray</span></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A NumPy array of physical values.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="RuntimeError">RuntimeError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If sample data has not been loaded yet.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/edfplus/_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-431">431</a></span>
+<span class="normal"><a href="#__codelineno-0-432">432</a></span>
+<span class="normal"><a href="#__codelineno-0-433">433</a></span>
+<span class="normal"><a href="#__codelineno-0-434">434</a></span>
+<span class="normal"><a href="#__codelineno-0-435">435</a></span>
+<span class="normal"><a href="#__codelineno-0-436">436</a></span>
+<span class="normal"><a href="#__codelineno-0-437">437</a></span>
+<span class="normal"><a href="#__codelineno-0-438">438</a></span>
+<span class="normal"><a href="#__codelineno-0-439">439</a></span>
+<span class="normal"><a href="#__codelineno-0-440">440</a></span>
+<span class="normal"><a href="#__codelineno-0-441">441</a></span>
+<span class="normal"><a href="#__codelineno-0-442">442</a></span>
+<span class="normal"><a href="#__codelineno-0-443">443</a></span>
+<span class="normal"><a href="#__codelineno-0-444">444</a></span>
+<span class="normal"><a href="#__codelineno-0-445">445</a></span>
+<span class="normal"><a href="#__codelineno-0-446">446</a></span>
+<span class="normal"><a href="#__codelineno-0-447">447</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-431" name="__codelineno-0-431"></a><span class="k">def</span><span class="w"> </span><span class="nf">physical_samples</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">dtype</span> <span class="o">|</span> <span class="nb">type</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<a id="__codelineno-0-432" name="__codelineno-0-432"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the loaded samples as scaled physical values.</span>
+<a id="__codelineno-0-433" name="__codelineno-0-433"></a>
+<a id="__codelineno-0-434" name="__codelineno-0-434"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-435" name="__codelineno-0-435"></a><span class="sd">        dtype: Optional NumPy float dtype to cast the output to.  Defaults to</span>
+<a id="__codelineno-0-436" name="__codelineno-0-436"></a><span class="sd">            ``float64``.</span>
+<a id="__codelineno-0-437" name="__codelineno-0-437"></a>
+<a id="__codelineno-0-438" name="__codelineno-0-438"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-439" name="__codelineno-0-439"></a><span class="sd">        A NumPy array of physical values.</span>
+<a id="__codelineno-0-440" name="__codelineno-0-440"></a>
+<a id="__codelineno-0-441" name="__codelineno-0-441"></a><span class="sd">    Raises:</span>
+<a id="__codelineno-0-442" name="__codelineno-0-442"></a><span class="sd">        RuntimeError: If sample data has not been loaded yet.</span>
+<a id="__codelineno-0-443" name="__codelineno-0-443"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-444" name="__codelineno-0-444"></a>    <span class="n">arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span>
+<a id="__codelineno-0-445" name="__codelineno-0-445"></a>    <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-446" name="__codelineno-0-446"></a>        <span class="k">return</span> <span class="n">arr</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-0-447" name="__codelineno-0-447"></a>    <span class="k">return</span> <span class="n">arr</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="edfplus.Signal.digital_samples" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">digital_samples</span><span class="p">()</span></code>
+
+<a href="#edfplus.Signal.digital_samples" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return the loaded samples as raw digital int16 values without scaling.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><span title="numpy.ndarray">ndarray</span></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A NumPy array with dtype <code>int16</code>.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="RuntimeError">RuntimeError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If sample data has not been loaded yet.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/edfplus/_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-449">449</a></span>
+<span class="normal"><a href="#__codelineno-0-450">450</a></span>
+<span class="normal"><a href="#__codelineno-0-451">451</a></span>
+<span class="normal"><a href="#__codelineno-0-452">452</a></span>
+<span class="normal"><a href="#__codelineno-0-453">453</a></span>
+<span class="normal"><a href="#__codelineno-0-454">454</a></span>
+<span class="normal"><a href="#__codelineno-0-455">455</a></span>
+<span class="normal"><a href="#__codelineno-0-456">456</a></span>
+<span class="normal"><a href="#__codelineno-0-457">457</a></span>
+<span class="normal"><a href="#__codelineno-0-458">458</a></span>
+<span class="normal"><a href="#__codelineno-0-459">459</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-449" name="__codelineno-0-449"></a><span class="k">def</span><span class="w"> </span><span class="nf">digital_samples</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<a id="__codelineno-0-450" name="__codelineno-0-450"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the loaded samples as raw digital int16 values without scaling.</span>
+<a id="__codelineno-0-451" name="__codelineno-0-451"></a>
+<a id="__codelineno-0-452" name="__codelineno-0-452"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-453" name="__codelineno-0-453"></a><span class="sd">        A NumPy array with dtype ``int16``.</span>
+<a id="__codelineno-0-454" name="__codelineno-0-454"></a>
+<a id="__codelineno-0-455" name="__codelineno-0-455"></a><span class="sd">    Raises:</span>
+<a id="__codelineno-0-456" name="__codelineno-0-456"></a><span class="sd">        RuntimeError: If sample data has not been loaded yet.</span>
+<a id="__codelineno-0-457" name="__codelineno-0-457"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-458" name="__codelineno-0-458"></a>    <span class="n">arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span>
+<a id="__codelineno-0-459" name="__codelineno-0-459"></a>    <span class="k">return</span> <span class="n">arr</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">int16</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="edfplus.Signal.timestamps" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">timestamps</span><span class="p">()</span></code>
+
+<a href="#edfplus.Signal.timestamps" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return per-sample onset times in seconds from the recording start.</p>
+<p>For sample index <code>i</code>, the onset is <code>i / sample_rate</code>.  For EDF+D signals
+that contain NaN gap-filler values, the corresponding positions in the returned
+array are also <code>NaN</code> so the two arrays remain positionally aligned.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><span title="numpy.ndarray">ndarray</span></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A <code>float64</code> NumPy array of length <code>len(samples)</code>.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="RuntimeError">RuntimeError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If sample data has not been loaded yet.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/edfplus/_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-463">463</a></span>
+<span class="normal"><a href="#__codelineno-0-464">464</a></span>
+<span class="normal"><a href="#__codelineno-0-465">465</a></span>
+<span class="normal"><a href="#__codelineno-0-466">466</a></span>
+<span class="normal"><a href="#__codelineno-0-467">467</a></span>
+<span class="normal"><a href="#__codelineno-0-468">468</a></span>
+<span class="normal"><a href="#__codelineno-0-469">469</a></span>
+<span class="normal"><a href="#__codelineno-0-470">470</a></span>
+<span class="normal"><a href="#__codelineno-0-471">471</a></span>
+<span class="normal"><a href="#__codelineno-0-472">472</a></span>
+<span class="normal"><a href="#__codelineno-0-473">473</a></span>
+<span class="normal"><a href="#__codelineno-0-474">474</a></span>
+<span class="normal"><a href="#__codelineno-0-475">475</a></span>
+<span class="normal"><a href="#__codelineno-0-476">476</a></span>
+<span class="normal"><a href="#__codelineno-0-477">477</a></span>
+<span class="normal"><a href="#__codelineno-0-478">478</a></span>
+<span class="normal"><a href="#__codelineno-0-479">479</a></span>
+<span class="normal"><a href="#__codelineno-0-480">480</a></span>
+<span class="normal"><a href="#__codelineno-0-481">481</a></span>
+<span class="normal"><a href="#__codelineno-0-482">482</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-463" name="__codelineno-0-463"></a><span class="k">def</span><span class="w"> </span><span class="nf">timestamps</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<a id="__codelineno-0-464" name="__codelineno-0-464"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return per-sample onset times in seconds from the recording start.</span>
+<a id="__codelineno-0-465" name="__codelineno-0-465"></a>
+<a id="__codelineno-0-466" name="__codelineno-0-466"></a><span class="sd">    For sample index ``i``, the onset is ``i / sample_rate``.  For EDF+D signals</span>
+<a id="__codelineno-0-467" name="__codelineno-0-467"></a><span class="sd">    that contain NaN gap-filler values, the corresponding positions in the returned</span>
+<a id="__codelineno-0-468" name="__codelineno-0-468"></a><span class="sd">    array are also ``NaN`` so the two arrays remain positionally aligned.</span>
+<a id="__codelineno-0-469" name="__codelineno-0-469"></a>
+<a id="__codelineno-0-470" name="__codelineno-0-470"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-471" name="__codelineno-0-471"></a><span class="sd">        A ``float64`` NumPy array of length ``len(samples)``.</span>
+<a id="__codelineno-0-472" name="__codelineno-0-472"></a>
+<a id="__codelineno-0-473" name="__codelineno-0-473"></a><span class="sd">    Raises:</span>
+<a id="__codelineno-0-474" name="__codelineno-0-474"></a><span class="sd">        RuntimeError: If sample data has not been loaded yet.</span>
+<a id="__codelineno-0-475" name="__codelineno-0-475"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-476" name="__codelineno-0-476"></a>    <span class="n">arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span>  <span class="c1"># raises RuntimeError if not loaded</span>
+<a id="__codelineno-0-477" name="__codelineno-0-477"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<a id="__codelineno-0-478" name="__codelineno-0-478"></a>    <span class="n">ts</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span>
+<a id="__codelineno-0-479" name="__codelineno-0-479"></a>    <span class="n">nan_mask</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<a id="__codelineno-0-480" name="__codelineno-0-480"></a>    <span class="k">if</span> <span class="n">nan_mask</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+<a id="__codelineno-0-481" name="__codelineno-0-481"></a>        <span class="n">ts</span><span class="p">[</span><span class="n">nan_mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">nan</span>
+<a id="__codelineno-0-482" name="__codelineno-0-482"></a>    <span class="k">return</span> <span class="n">ts</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="edfplus.Signal.datetimes" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">datetimes</span><span class="p">()</span></code>
+
+<a href="#edfplus.Signal.datetimes" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return per-sample absolute datetimes as <code>numpy.datetime64</code> values.</p>
+<p>Each element is <code>EDFHeader.start_datetime + timedelta(seconds=onset_i)</code> where
+<code>onset_i</code> comes from <code>timestamps()</code>.  Gap samples (NaN onset) produce
+<code>numpy.datetime64('NaT')</code> entries.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><span title="numpy.ndarray">ndarray</span></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A NumPy array of <code>datetime64[us]</code> values of length <code>len(samples)</code>.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="RuntimeError">RuntimeError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If sample data has not been loaded yet.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/edfplus/_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-484">484</a></span>
+<span class="normal"><a href="#__codelineno-0-485">485</a></span>
+<span class="normal"><a href="#__codelineno-0-486">486</a></span>
+<span class="normal"><a href="#__codelineno-0-487">487</a></span>
+<span class="normal"><a href="#__codelineno-0-488">488</a></span>
+<span class="normal"><a href="#__codelineno-0-489">489</a></span>
+<span class="normal"><a href="#__codelineno-0-490">490</a></span>
+<span class="normal"><a href="#__codelineno-0-491">491</a></span>
+<span class="normal"><a href="#__codelineno-0-492">492</a></span>
+<span class="normal"><a href="#__codelineno-0-493">493</a></span>
+<span class="normal"><a href="#__codelineno-0-494">494</a></span>
+<span class="normal"><a href="#__codelineno-0-495">495</a></span>
+<span class="normal"><a href="#__codelineno-0-496">496</a></span>
+<span class="normal"><a href="#__codelineno-0-497">497</a></span>
+<span class="normal"><a href="#__codelineno-0-498">498</a></span>
+<span class="normal"><a href="#__codelineno-0-499">499</a></span>
+<span class="normal"><a href="#__codelineno-0-500">500</a></span>
+<span class="normal"><a href="#__codelineno-0-501">501</a></span>
+<span class="normal"><a href="#__codelineno-0-502">502</a></span>
+<span class="normal"><a href="#__codelineno-0-503">503</a></span>
+<span class="normal"><a href="#__codelineno-0-504">504</a></span>
+<span class="normal"><a href="#__codelineno-0-505">505</a></span>
+<span class="normal"><a href="#__codelineno-0-506">506</a></span>
+<span class="normal"><a href="#__codelineno-0-507">507</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-484" name="__codelineno-0-484"></a><span class="k">def</span><span class="w"> </span><span class="nf">datetimes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<a id="__codelineno-0-485" name="__codelineno-0-485"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return per-sample absolute datetimes as ``numpy.datetime64`` values.</span>
+<a id="__codelineno-0-486" name="__codelineno-0-486"></a>
+<a id="__codelineno-0-487" name="__codelineno-0-487"></a><span class="sd">    Each element is ``EDFHeader.start_datetime + timedelta(seconds=onset_i)`` where</span>
+<a id="__codelineno-0-488" name="__codelineno-0-488"></a><span class="sd">    ``onset_i`` comes from ``timestamps()``.  Gap samples (NaN onset) produce</span>
+<a id="__codelineno-0-489" name="__codelineno-0-489"></a><span class="sd">    ``numpy.datetime64(&#39;NaT&#39;)`` entries.</span>
+<a id="__codelineno-0-490" name="__codelineno-0-490"></a>
+<a id="__codelineno-0-491" name="__codelineno-0-491"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-492" name="__codelineno-0-492"></a><span class="sd">        A NumPy array of ``datetime64[us]`` values of length ``len(samples)``.</span>
+<a id="__codelineno-0-493" name="__codelineno-0-493"></a>
+<a id="__codelineno-0-494" name="__codelineno-0-494"></a><span class="sd">    Raises:</span>
+<a id="__codelineno-0-495" name="__codelineno-0-495"></a><span class="sd">        RuntimeError: If sample data has not been loaded yet.</span>
+<a id="__codelineno-0-496" name="__codelineno-0-496"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-497" name="__codelineno-0-497"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edf_header</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-498" name="__codelineno-0-498"></a>        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Cannot compute datetimes without an associated EDFHeader.&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-499" name="__codelineno-0-499"></a>    <span class="n">ts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">timestamps</span><span class="p">()</span>
+<a id="__codelineno-0-500" name="__codelineno-0-500"></a>    <span class="n">origin</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edf_header</span><span class="o">.</span><span class="n">start_datetime</span><span class="p">,</span> <span class="s2">&quot;us&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-501" name="__codelineno-0-501"></a>    <span class="n">delta</span> <span class="o">=</span> <span class="p">(</span><span class="n">ts</span> <span class="o">*</span> <span class="mi">1_000_000</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;timedelta64[us]&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-502" name="__codelineno-0-502"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">origin</span> <span class="o">+</span> <span class="n">delta</span>
+<a id="__codelineno-0-503" name="__codelineno-0-503"></a>    <span class="n">nat_mask</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<a id="__codelineno-0-504" name="__codelineno-0-504"></a>    <span class="k">if</span> <span class="n">nat_mask</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+<a id="__codelineno-0-505" name="__codelineno-0-505"></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<a id="__codelineno-0-506" name="__codelineno-0-506"></a>        <span class="n">result</span><span class="p">[</span><span class="n">nat_mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">&quot;NaT&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-507" name="__codelineno-0-507"></a>    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="edfplus.Annotation" class="doc doc-heading">
+              <code class="highlight language-python"><span class="n">Annotation</span><span class="p">(</span><span class="n">onset</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#edfplus.Annotation" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>A single EDF+ annotation parsed from a Time-stamped Annotation List (TAL).</p>
+<p>Each <code>Annotation</code> holds exactly one text string. Multi-text TAL blocks
+produce multiple <code>Annotation</code> instances sharing the same onset and duration.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">ATTRIBUTE</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Annotation.onset">onset</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Onset time in seconds from the recording start.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="float">float</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Annotation.duration">duration</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Duration of the annotated event in seconds, or <code>None</code> if the TAL
+entry did not include a duration field.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="float">float</span> | None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="edfplus.Annotation.text">text</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>The annotation text string for this entry.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../motivation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Motivation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Motivation
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
