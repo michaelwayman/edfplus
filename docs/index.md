@@ -26,3 +26,9 @@ Handle EDF+ extensions: continuous (EDF+C) and discontinuous (EDF+D) files
 Parse Time-stamped Annotations Lists (TAL)
 Lazy signal loading for memory efficiency
 Fully typed Python API
+
+## Why edfplus?
+
+Existing Python EDF libraries fall short for modern biosignal workflows: incomplete EDF+D support corrupts long clinical recordings, naive datetime handling breaks ML timestamp alignment, and eager full-file loading causes OOM failures at scale. `edfplus` was purpose-built to solve these problems with correct discontinuous recording support, explicit timezone control, and memory-efficient streaming reads.
+
+Read the full [Motivation](motivation.md) page for a detailed technical discussion.
