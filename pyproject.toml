@@ -1,7 +1,7 @@
 [project]
 name = "edfplus"
-version = "0.1.0"
-description = "A python package for reading EDF/EDF+ files and generating timestamps"
+version = "0.0.1"
+description = "A python library for reading EDF/EDF+ files and generating timestamps"
 readme = "README.md"
 authors = [
     { name = "Michael Wayman", email = "michaelwayman@gmail.com" }
@@ -24,6 +24,10 @@ dev = [
     "pytest>=9.1.1",
     "ruff>=0.15.22",
     "ty>=0.0.61",
+]
+docs = [
+    "mkdocs-material>=9.6",
+    "mkdocstrings[python]>=0.29",
 ]
 
 [tool.ruff]

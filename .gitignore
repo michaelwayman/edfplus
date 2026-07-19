@@ -11,3 +11,6 @@ wheels/
 
 # EDF Binarys
 *.edf
+
+# Docs Site
+site/
