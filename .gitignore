@@ -6,11 +6,16 @@ dist/
 wheels/
 *.egg-info
 
+# Docs build
+site/
+
+# Testing & coverage
+.coverage
+coverage.xml
+
 # Virtual environments
 .venv
 
 # EDF Binarys
 *.edf
 
-# Docs Site
-site/

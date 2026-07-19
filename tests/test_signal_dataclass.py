@@ -32,7 +32,7 @@ def _make_signal(**overrides: object) -> Signal:
         "index": 0,
     }
     defaults.update(overrides)
-    return Signal(**defaults)  # type: ignore[arg-type]
+    return Signal(**defaults)  # type: ignore[arg-type, ty:invalid-argument-type]
 
 
 class TestSignalIsDataclass:

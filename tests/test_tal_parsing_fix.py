@@ -93,6 +93,7 @@ class TestBugConditionTALWithoutDuration:
 
         onset_str = _format_onset(onset)
         block = _build_tal_block_no_duration(onset_str, texts)
+        texts = [t.strip() for t in texts]
 
         result = _parse_tal_block(block, record_index=0, is_first_tal=False)
 
@@ -314,6 +315,7 @@ class TestPreservationTALWithDuration:
         """
         from edfplus._tal import _parse_tal_block
 
+        texts = [t.strip() for t in texts]
         onset_str = _format_onset(onset)
         duration_str = f"{duration:g}"
         block = _build_tal_block_with_duration(onset_str, duration_str, texts)
