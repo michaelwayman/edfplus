@@ -56,15 +56,17 @@ This approach makes it straightforward to align EDF signal data with external ev
 
 ## Memory efficiency at scale
 
-High-density PSG recordings generate large files. Consider a typical clinical configuration: 24 signals sampled at 512 Hz for 10 hours. Read into NumPy as the default `float64` dtype, that is:
+High-density PSG recordings generate large files. Consider a typical clinical configuration: 30 signals sampled at 512 Hz for 10 hours. Read into NumPy as the default `float64` dtype:
 
 ```
-24 signals × 512 samples/sec × 36,000 seconds × 8 bytes = ~3.5 GB per signal set
+30 signals × 512 samples/sec × 36,000 seconds × 8 bytes ≈ 4.4 GB per recording
 ```
 
-With standard float64 arrays, total memory consumption approaches **28 GB** — exceeding the RAM of most workstations and virtually all cloud ML training instances.
+Once per-sample timestamps are computed alongside the signal data, the baseline memory footprint doubles to approximately **8.8 GB** — just for the raw arrays.
 
-`edfplus` provides three levers to control memory footprint:
+In practice, the situation is worse. Any ETL or ML pipeline holds the raw signals in memory simultaneously with normalized copies, windowed transforms, spectral features, and other derived representations. A single file can easily consume dozens of gigabytes across the stages of a feature engineering pipeline. This is why controlling what gets loaded — and how — is critical for production biosignal workflows.
+
+`edfplus` provides fine-grained control over memory consumption:
 
 ### Configurable dtype
 
@@ -76,7 +78,7 @@ from edfplus import read_edf
 
 with read_edf("large_study.edf", dtype=np.float32) as edf:
     # Samples are scaled to physical units but stored as float32
-    # Memory usage: ~14 GB instead of ~28 GB
+    # Memory usage: ~2.2 GB instead of ~4.4 GB
     samples = edf["EEG Fp1"].samples
 ```
 
@@ -89,17 +91,32 @@ from edfplus import read_edf
 
 with read_edf("large_study.edf", physical=False) as edf:
     # Raw int16 values — 2 bytes per sample
-    # Memory usage: ~0.9 GB for 24 channels × 512 Hz × 10 hours
+    # Memory usage: ~1.1 GB for 30 channels × 512 Hz × 10 hours
     raw = edf["EEG Fp1"].samples
 ```
 
 This is particularly useful for preprocessing pipelines that apply their own normalization, or for feeding data into models that expect integer inputs.
+
+### Selective signal loading
+
+Rather than materializing all 30 channels at once, load only the signals your pipeline actually needs:
+
+```python
+from edfplus import read_edf
+
+with read_edf("large_study.edf", dtype=np.float32) as edf:
+    # Load only the channels relevant to your model
+    eeg = edf["EEG Fp1"]
+    ecg = edf["ECG"]
+    # The other 28 channels are never read into memory
+```
 
 ### Lazy and streaming reads
 
 By default, `edfplus` does not load samples into memory until they are accessed. Combined with slice-based loading, this enables streaming workflows that process recordings in chunks without ever materializing the full dataset:
 
 ```python
+import numpy as np
 from edfplus import read_edf
 
 with read_edf("large_study.edf", dtype=np.float32) as edf:
@@ -111,11 +128,11 @@ with read_edf("large_study.edf", dtype=np.float32) as edf:
         # Process chunk...
 ```
 
-This prevents OOM errors in memory-constrained environments such as containerized ML pipelines, CI runners, and edge devices.
+This prevents OOM errors in memory-constrained environments such as containerized ML pipelines, CI runners, and edge devices. The combination of selective signal access, configurable dtypes, and streaming reads means `edfplus` can handle arbitrarily large recordings without requiring the entire file to fit in RAM.
 
 ## Roadmap
 
-The next release will introduce configurable **interpolation and downsampling** strategies, giving users explicit control over the fidelity-vs-resource trade-off when working with multi-rate signal files.
+The next release will introduce configurable **interpolation and downsampling** strategies, giving users explicit control over the fidelity-vs-resource trade-off when working with multi-rate signal files. This includes streaming interpolation that operates on chunks rather than requiring the full signal in memory.
 
 This is a deliberate design contrast with libraries (e.g., `mne`) that automatically upsample lower-rate signals to match the highest rate in the file — synthesizing samples that do not exist in the original recording and inflating memory usage unnecessarily.
 

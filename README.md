@@ -260,23 +260,26 @@ Existing libraries typically handle this by either assuming UTC or returning nai
 
 ### Memory efficiency at scale
 
-High-density PSG recordings generate large files. Consider a typical configuration: 24 signals sampled at 512 Hz for 10 hours. Read into NumPy as the default `float64` dtype, that is:
+High-density PSG recordings generate large files. Consider a typical clinical configuration: 30 signals sampled at 512 Hz for 10 hours. Read into NumPy as the default `float64` dtype:
 
 ```
-24 × 512 × 36,000 seconds × 8 bytes = ~3.5 GB per signal set
+30 × 512 × 36,000 seconds × 8 bytes ≈ 4.4 GB per recording
 ```
 
-With standard float64 arrays, total memory consumption approaches **28 GB** — exceeding the RAM of most workstations and virtually all cloud ML instances.
+Once per-sample timestamps are computed alongside the signal data, the baseline memory footprint doubles to approximately **8.8 GB** — just for the raw arrays. In practice, any ETL or ML pipeline holds the raw signals in memory simultaneously with normalized copies, windowed transforms, spectral features, and other derived representations. A single file can easily consume dozens of gigabytes across the stages of a feature engineering pipeline.
 
-`edfplus` provides three levers to control memory footprint:
+This is why `edfplus` provides fine-grained control over what gets loaded and how:
 
 - **Configurable dtype** — pass `dtype=numpy.float32` to halve memory usage while retaining physical scaling.
-- **Raw digital access** — set `physical=False` to read the native int16 samples directly, reducing the footprint to approximately **0.9 GB** for the same recording.
-- **Lazy and streaming reads** — samples are loaded on demand rather than eagerly materialized. Use `signal.load(start, stop)` to read only the segments your pipeline needs, preventing OOM errors in memory-constrained environments.
+- **Raw digital access** — set `physical=False` to read the native int16 samples directly, reducing the signal footprint to approximately **1.1 GB** for the same recording.
+- **Selective signal loading** — read individual signals or a subset rather than materializing all 30 channels at once. Process one signal at a time or pick only the channels your model requires.
+- **Lazy and streaming reads** — samples are loaded on demand rather than eagerly materialized. Use `signal.load(start, stop)` to read only the time segments your pipeline needs, preventing OOM errors in memory-constrained environments such as containerized ML pipelines, CI runners, and edge devices.
 
 ## Roadmap
 
-The next release will introduce configurable **interpolation and downsampling** strategies, giving users explicit control over the fidelity-vs-resource trade-off when working with multi-rate signal files. This is a deliberate design contrast with libraries (e.g., `mne`) that automatically upsample lower-rate signals to match the highest rate in the file — synthesizing samples that do not exist in the original recording and inflating memory usage unnecessarily. `edfplus` will instead allow users to choose a resampling strategy (or none at all), preserving data integrity by default and only introducing synthetic samples when explicitly requested.
+The next release will introduce configurable **interpolation and downsampling** strategies, giving users explicit control over the fidelity-vs-resource trade-off when working with multi-rate signal files. This includes streaming interpolation that operates on chunks rather than requiring the full signal in memory.
+
+This is a deliberate design contrast with libraries (e.g., `mne`) that automatically upsample lower-rate signals to match the highest rate in the file — synthesizing samples that do not exist in the original recording and inflating memory usage unnecessarily. `edfplus` will instead allow users to choose a resampling strategy (or none at all), preserving data integrity by default and only introducing synthetic samples when explicitly requested.
 
 ## Development
 
