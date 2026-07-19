@@ -129,11 +129,3 @@ with read_edf("large_study.edf", dtype=np.float32) as edf:
 ```
 
 This prevents OOM errors in memory-constrained environments such as containerized ML pipelines, CI runners, and edge devices. The combination of selective signal access, configurable dtypes, and streaming reads means `edfplus` can handle arbitrarily large recordings without requiring the entire file to fit in RAM.
-
-## Roadmap
-
-The next release will introduce configurable **interpolation and downsampling** strategies, giving users explicit control over the fidelity-vs-resource trade-off when working with multi-rate signal files. This includes streaming interpolation that operates on chunks rather than requiring the full signal in memory.
-
-This is a deliberate design contrast with libraries (e.g., `mne`) that automatically upsample lower-rate signals to match the highest rate in the file — synthesizing samples that do not exist in the original recording and inflating memory usage unnecessarily.
-
-`edfplus` will instead allow users to choose a resampling strategy (or none at all), preserving data integrity by default and only introducing synthetic samples when explicitly requested.

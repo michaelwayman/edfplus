@@ -18,13 +18,44 @@ A typed Python library for reading [EDF and EDF+](https://www.edfplus.info/) bio
 
 The full specification is available at [edfplus.info](https://www.edfplus.info/).
 
+## Features
+
+| Category              | Feature                                                |     |
+| --------------------- | ------------------------------------------------------ | --- |
+| 📄 **Format Support** | EDF / EDF+                                             | ✅  |
+|                       | EDF+C / EDF+D                                          | ✅  |
+| 📂 **Read From**      | String path or `PathLike`                              | ✅  |
+|                       | Binary file objects                                    | ✅  |
+|                       | Any seekable stream (`BinaryIO`)                       | ✅  |
+| 🏷️ **Metadata**       | Full header field access (patient, recording, signals) | ✅  |
+|                       | EDF+ annotations & TALs                                | ✅  |
+|                       | Normalized & typed subfields                           | ✅  |
+| 📊 **Signal Data**    | Lazy loading                                           | ✅  |
+|                       | Cherry-pick data                                       | ✅  |
+|                       | Or grab everything at once                             | ✅  |
+|                       | Physical (scaled float) or digital (raw int16)         | ✅  |
+|                       | Pick your dtype — your RAM will thank you              | ✅  |
+| 🕐 **Timestamps**     | Timezone correction                                    | ✅  |
+|                       | Per-sample timestamps (seconds)                        | ✅  |
+|                       | Per-sample datetimes (absolute)                        | ✅  |
+|                       | Onset-relative timing                                  | ✅  |
+| 🔎 **Read Filters**   | Slice by seconds or by index                           | ✅  |
+|                       | Slice by datetimes or durations                        | ✅  |
+| 🧠 **Fully Typed**    | Complete type annotations across the public API        | ✅  |
+|                       | PEP 561 `py.typed` — your type checker is happy        | ✅  |
+
 ## Installation
 
 ```bash
+# uv
+uv add edfplus
+
+# others
+poetry add edfplus
 pip install edfplus
 ```
 
-Requires Python 3.14+ and NumPy.
+Requires Python 3.12+ and NumPy.
 
 ## Quickstart
 
@@ -128,20 +159,10 @@ A frozen dataclass containing all fields from the 256-byte global header.
 | `header_bytes` | `int` | Total header size in bytes. |
 | `local_patient_id` | `str` | Raw 80-byte patient identification field. |
 | `local_recording_id` | `str` | Raw 80-byte recording identification field. |
-
-EDF+ extended patient subfields (all `None` for plain EDF):
-
-| Field | Type | Description |
-|-------|------|-------------|
 | `patient_code` | `str \| None` | Hospital/patient code. |
 | `patient_sex` | `str \| None` | Sex subfield. |
 | `patient_birthdate` | `datetime.date \| None` | Patient birthdate. |
 | `patient_name` | `str \| None` | Patient name. |
-
-EDF+ extended recording subfields (all `None` for plain EDF):
-
-| Field | Type | Description |
-|-------|------|-------------|
 | `recording_startdate` | `datetime.date \| None` | Recording start date from EDF+ subfield. |
 | `recording_admin_code` | `str \| None` | Investigation/admin code. |
 | `recording_technician` | `str \| None` | Technician/investigator code. |
